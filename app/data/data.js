@@ -144,7 +144,8 @@ export const hobbies = [
 ];
 
 export const contactData = [
-  { type: "+8801783638383", icon: <FiPhone /> },
-  { type: "imtiazhasan500@gmail.com", icon: <LuMail /> },
-  { type: "Kallyanpur,Dhaka-1207,Bangladesh", icon: <IoHomeOutline /> },
+  {name: "Phone", info: "+8801783638383", icon: <FiPhone /> },
+  {name: "Email", info: "imtiaz.dev@gmail.com", icon: <LuMail /> },
+  {name: "Website", info: "Kallyanpur,Dhaka-1207,Bangladesh", icon: <IoHomeOutline /> },
+  {name: "Address", info: "https://imtiazdev.vercel.app", icon: <IoHomeOutline /> },
 ];

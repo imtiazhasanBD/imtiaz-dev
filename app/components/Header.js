@@ -1,43 +1,69 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { RiMenu2Line } from "react-icons/ri";
 import { FaCode } from "react-icons/fa";
 import { IoSunnySharp } from "react-icons/io5";
 import { FaBars } from "react-icons/fa";
 import { HiMiniBars3 } from "react-icons/hi2";
+import { GiMoon } from "react-icons/gi";
 
 import { navLinks } from "../constant/constant";
 import { socialMedia } from "../data/data";
+import GetInTouch from "./GetInTouch";
+import NavbarForMobile from "./NavbarForMobile";
+import { useTheme } from "./ThemeProvider";
 
 const Header = () => {
+  const { theme, toggleTheme } = useTheme();
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isLeftBarOpen, setIsLeftBarOpen] = useState(false);
+  const toggleLeftSidebar = () => {
+    setIsLeftBarOpen(!isLeftBarOpen);
+  };
+  const toggleRightSidebar = () => {
+    setMobileMenuOpen(!isMobileMenuOpen);
+  };
+  console.log(theme);
+
   return (
-<header className="text-white bg-customBg sm:mx-[70px] lg:mt-6 m-2 rounded-lg">
-  <nav className="flex justify-between space-x-6">
-    {/* Left Section - Menu Icon */}
-    <div className="bg-customGray p-8 lg:px-6 xl:p-8 cursor-pointer hover:bg-gray-700 transition-colors hidden sm:block">
-      <RiMenu2Line  />
-    </div>
+    <header className="flex justify-between items-center  dark:bg-customBg bg-coustomLiteBg p-6 md:p-8  text-white rounded-lg">
+      <GetInTouch isOpen={isLeftBarOpen} toggleSidebar={toggleLeftSidebar} />
+      <NavbarForMobile
+        isOpen={isMobileMenuOpen}
+        toggleSidebar={toggleRightSidebar}
+      />
 
-    {/* Center Section - Branding & Navigation */}
-    <section className="flex items-center justify-between w-full">
-      {/* Branding */}
-      <div className="flex items-center text-lg lg:text-2xl space-x-2">
-        <FaCode className="text-3xl lg:text-4xl text-customLiteGreen" />
-        <span className=" lg:hidden xl:block">Imtiaz.dev</span>
-      </div>
-
+      {/* Left Section - Menu Icon */}
+      <section className="flex items-center gap-6">
+        <div
+          onClick={toggleLeftSidebar}
+          className="bg-costomGaryLite dark:bg-customGray cursor-pointer hover:bg-gray-700 transition-colors hidden sm:block"
+        >
+          <RiMenu2Line />
+        </div>
+        {/* Branding */}
+        <div className="flex items-center text-lg lg:text-2xl space-x-2">
+          <FaCode className="text-3xl lg:text-4xl text-customLiteGreen" />
+          <span className=" lg:hidden xl:block">Imtiaz.dev</span>
+        </div>
+      </section>
       {/* Navigation Links */}
-      <ul className="hidden lg:flex space-x-8 text-lg">
-        <li className="cursor-pointer text-white hover:text-gray-400 transition-colors">Home</li>
-        {navLinks.map((navlink) => (
-          <li
-            key={navlink.id}
-            className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300"
-          >
-            {navlink.label}
+      <nav>
+        <ul className="hidden lg:flex space-x-8 text-lg">
+          <li className="cursor-pointer text-white hover:text-gray-400 transition-colors">
+            Home
           </li>
-        ))}
-      </ul>
-
+          {navLinks.map((navlink) => (
+            <li
+              key={navlink.id}
+              className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300"
+            >
+              {navlink.label}
+            </li>
+          ))}
+        </ul>
+      </nav>
       {/* Social Media Links */}
       <div className="md:flex space-x-5 hidden">
         {socialMedia.map((platform, i) => (
@@ -53,25 +79,24 @@ const Header = () => {
           </a>
         ))}
       </div>
-    </section>
-
-    {/* Right Section - Theme Icon */}
-    <div className="flex items-center lg:block">
-  {/* Theme Icon */}
-  <div className="lg:bg-customGray p-8 lg:px-6 xl:p-8 cursor-pointer hover:bg-gray-700 transition-colors">
-    <IoSunnySharp className="text-yellow-500 text-2xl lg:text-xl" />
-  </div>
-
-  {/* Mobile Menu Icon - Hidden on larger screens */}
-  <div className="p-2 border border-customLiteGreen rounded-lg cursor-pointer hover:bg-gray-700 transition-colors lg:hidden mr-4">
-    <HiMiniBars3 className="text-3xl text-white" />
-  </div>
-</div>
-
-      
-  </nav>
-</header>
-
+      {/* Right Section - Theme Icon */}
+      <section className="flex items-center gap-6 lg:block">
+        {/* Theme Icon */}
+        <div
+          onClick={toggleTheme}
+          className="lg:bg-costomGaryLite dark:lg:bg-customGray cursor-pointer hover:bg-gray-700 transition-colors text-yellow-500 text-2xl lg:text-xl"
+        >
+          {theme === "light" ? <IoSunnySharp /> : <GiMoon />}
+        </div>
+        {/* Mobile Menu Icon - Hidden on larger screens */}
+        <div
+          onClick={toggleRightSidebar}
+          className="p-2 border border-customLiteGreen rounded-lg cursor-pointer hover:bg-gray-700 transition-colors lg:hidden"
+        >
+          <HiMiniBars3 className="md:text-3xl text-white" />
+        </div>
+      </section>
+    </header>
   );
 };
 
