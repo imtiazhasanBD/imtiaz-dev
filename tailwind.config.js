@@ -8,7 +8,11 @@ module.exports = {
   ],
   theme: {
     extend: {
-      
+      animation: {
+        'spin-slow': 'spin 10s linear infinite',
+        'spin-slower': 'spin 20s linear infinite',
+        'spin-slowest': 'spin 30s linear infinite',
+      },
       colors: {
          background: "#1F1F24",
          customGreen: "#62a92b",

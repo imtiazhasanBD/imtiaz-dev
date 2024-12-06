@@ -27,7 +27,7 @@ const Header = () => {
   console.log(theme);
 
   return (
-    <header className="flex justify-between items-center  dark:bg-customBg bg-coustomLiteBg p-6 md:p-8  text-white rounded-lg">
+    <header className="flex justify-between items-center  dark:bg-customBg bg-coustomLiteBg p-6 md:px-8 md:py-6  text-white rounded-lg">
       <GetInTouch isOpen={isLeftBarOpen} toggleSidebar={toggleLeftSidebar} />
       <NavbarForMobile
         isOpen={isMobileMenuOpen}

@@ -17,13 +17,13 @@ const GetInTouch = ({ isOpen, toggleSidebar }) => {
 
       {/* Sliding Menu */}
       <div
-        className={`h-full left-0 top-0 w-3/6 md:w-2/5  lg:w-2/6 xl:w-1/4 flex flex-col justify-center p-7 text-white space-y-6 fixed bg-background z-[1006]  transform transition-transform duration-500 ease-in-out ${
+        className={`h-full left-0 top-0 w-3/6 md:w-2/5  lg:w-2/6 xl:w-1/4 flex flex-col justify-center p-7  space-y-6 fixed bg-white dark:bg-background z-[1006]  transform transition-transform duration-500 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <h1 className="text-4xl border-b border-customGreen pb-8">Get in touch</h1>
-        <div className="text-slate-300">
-          <p>
+        <h1 className="text-4xl text-black dark:text-white border-b border-customGreen pb-8 font-medium">Get in touch</h1>
+        <div className="text-slate-600 dark:text-slate-300">
+          <p className="">
             I'm always excited to take on new projects and collaborate with
             innovative minds.
           </p>

@@ -8,7 +8,7 @@ const NavbarForMobile = ({ isOpen, toggleSidebar }) => {
     <div className="fixed h-full z-50 top-0 right-0 lg:hidden">
       {isOpen &&
       <div onClick={toggleSidebar} className="w-full h-screen inset-0 z-[1000] bg-black opacity-70 fixed"></div> }
-      <div className={`h-full w-3/4 sm:w-2/5 lg:w-2/6 xl:w-1/4 flex flex-col justify-center p-7 text-white space-y-6 fixed bg-background z-[1006]  transform transition-transform duration-500 ease-in-out ${
+      <div className={`h-full w-3/4 sm:w-2/5 lg:w-2/6 xl:w-1/4 flex flex-col justify-center p-7 text-gray-900 font-medium dark:text-white space-y-6 fixed bg-white dark:bg-background z-[1006]  transform transition-transform duration-500 ease-in-out ${
           !isOpen ? "translate-x-0" : "-translate-x-full"
         }`}>
         {navLinks.map((navLink) => (
@@ -20,7 +20,7 @@ const NavbarForMobile = ({ isOpen, toggleSidebar }) => {
             {navLink.label}
           </button>
         ))}
-          <a className="text-xl font-semibold py-3 px-8 bg-customGradient text-customLiteGreen rounded-md hover:text-black m-auto border border-customLiteGreen">RESUME</a>
+          <a className="text-xl font-semibold py-3 px-8 bg-customGradient text-customGreen rounded-md hover:text-black m-auto border border-customGreen">RESUME</a>
         {/* Close button */}
         <CgClose
           onClick={toggleSidebar}
