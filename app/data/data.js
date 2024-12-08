@@ -201,15 +201,15 @@ export const contactData = [
   { name: "Phone", info: "+8801783638383", icon: <FiPhone /> },
   { name: "Email", info: "imtiaz.dev@gmail.com", icon: <LuMail /> },
   {
-    name: "Website",
+    name: "Linkdin",
+    info: "/imtiazhasanbd",
+    icon: <FaLinkedin />,
+  },
+   {
+    name: "Adress",
     info: "Kallyanpur,Dhaka-1207,Bangladesh",
     icon: <IoHomeOutline />,
-  },
-  {
-    name: "Address",
-    info: "https://imtiazdev.vercel.app",
-    icon: <IoHomeOutline />,
-  },
+  }
 ];
 
 export const projects = [

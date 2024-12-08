@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en" className="dark">
-      <body className={`${dmMono.className} dark:bg-background bg-gray-200 pb-[1000px]`}>
+      <body className={`${dmMono.className} dark:bg-background bg-gray-200`}>
       <ThemeProvider
             attribute="class"
             defaultTheme="dark"

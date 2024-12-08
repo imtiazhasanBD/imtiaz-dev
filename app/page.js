@@ -3,6 +3,8 @@ import Header from "./components/Header";
 import Hero from "./sections/Hero";
 import ProjectSlider from "./sections/ProjectSlider";
 import Skills from "./sections/Skills";
+import Contact from "./sections/Contact";
+import { Footer } from "./components/Footer";
 
 
 export default function Home() {
@@ -12,6 +14,8 @@ export default function Home() {
       <Hero/>
       <ProjectSlider/>
       <Skills/>
+      <Contact/>
+      <Footer/>
     </div>
   );
 }
