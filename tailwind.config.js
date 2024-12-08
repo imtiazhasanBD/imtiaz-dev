@@ -9,9 +9,8 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'spin-slow': 'spin 10s linear infinite',
-        'spin-slower': 'spin 20s linear infinite',
-        'spin-slowest': 'spin 30s linear infinite',
+        'spin-slow': 'spin 8s linear infinite',
+        'spin-slower': 'spin 50s linear infinite',
       },
       colors: {
          background: "#1F1F24",

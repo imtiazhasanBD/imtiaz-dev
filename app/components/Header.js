@@ -12,19 +12,24 @@ import { navLinks } from "../constant/constant";
 import { socialMedia } from "../data/data";
 import GetInTouch from "./GetInTouch";
 import NavbarForMobile from "./NavbarForMobile";
-import { useTheme } from "./ThemeProvider";
+import { useTheme } from "next-themes"
 
 const Header = () => {
-  const { theme, toggleTheme } = useTheme();
+
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isLeftBarOpen, setIsLeftBarOpen] = useState(false);
+  const {theme, setTheme } = useTheme()
+
   const toggleLeftSidebar = () => {
     setIsLeftBarOpen(!isLeftBarOpen);
   };
   const toggleRightSidebar = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
-  console.log(theme);
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  }
 
   return (
     <header className="flex justify-between items-center  dark:bg-customBg bg-coustomLiteBg p-6 md:px-8 md:py-6  text-white rounded-lg">

@@ -11,7 +11,7 @@ const Hero = () => {
   const words = "Hey, I’m Imtiaz";
 
   return (
-    <div className="py-8 lg:py-16 dark:bg-customBg bg-white border dark:border-gray-700 border-white flex flex-col lg:flex-row gap-10 px-4 sm:px-10 lg:px-8">
+    <div className="py-8 lg:py-16 dark:bg-customBg bg-white border rounded-b-lg shadow-md dark:border-gray-700 border-white flex flex-col lg:flex-row gap-10 px-4 sm:px-10 lg:px-8">
       <div className="relative lg:my-auto md:m-auto">
         {/* Main Image */}
         <div className="w-full">
@@ -92,12 +92,12 @@ const Hero = () => {
         <div className="w-full py-8 h-32 flex space-x-6 justify-between">
           {/* Marquee Section */}
           <div className="overflow-hidden w-[300px] md:w-[660px]">
-            <Marquee gradient={false} speed={50} className="w-[660px]">
+            <Marquee gradient={false} speed={30} pauseOnHover className="w-[660px]">
               <div className="flex space-x-6 pr-6">
                 {skills.map((skill, i) => (
                   <span
                     key={i}
-                    className={`text-4xl ${skill.color} p-3 rounded-lg border border-gray-400 dark:border-gray-700 hover:bg-costomGaryLite`}
+                    className={`text-4xl ${skill.color} p-3 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-costomGaryLite`}
                   >
                     {skill.icon}
                   </span>

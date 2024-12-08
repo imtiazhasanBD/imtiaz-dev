@@ -2,6 +2,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import { DM_Mono } from "next/font/google";
 import { ThemeProvider } from "./components/ThemeProvider";
+;
 
 const dmMono = DM_Mono({
   subsets: ["latin"], // You can add more subsets if needed
@@ -20,9 +21,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
       <body className={`${dmMono.className} dark:bg-background bg-gray-200 pb-[1000px]`}>
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+      <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
       </body>
     </html>
   );
