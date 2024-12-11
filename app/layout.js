@@ -2,7 +2,9 @@ import "./globals.css";
 import Header from "./components/Header";
 import { DM_Mono } from "next/font/google";
 import { ThemeProvider } from "./components/ThemeProvider";
-;
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import ScrollToTop from "./components/ScrollToTop";
 
 const dmMono = DM_Mono({
   subsets: ["latin"], // You can add more subsets if needed
@@ -27,8 +29,11 @@ export default function RootLayout({ children }) {
             enableSystem
             disableTransitionOnChange
           >
+            <Header/>
             {children}
           </ThemeProvider>
+          <ToastContainer/>
+          <ScrollToTop/>
       </body>
     </html>
   );

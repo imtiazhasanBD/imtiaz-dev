@@ -16,7 +16,7 @@ const Hero = () => {
         {/* Main Image */}
         <div className="w-full">
           <Image
-            src="/hero_photo2.png"
+            src="/images/hero_photo_new.png"
             alt="Picture of the author"
             layout="resposive"
             width={450}
@@ -63,7 +63,7 @@ const Hero = () => {
           <span>&lt;span/&gt;</span>
         </div>
         <div className="text-5xl font-medium">
-          Junior
+           Passionate 
           <h1 className="text-customGreen py-2">{`{Frontend}`}</h1>
           Web & App developer
           <Typewriter

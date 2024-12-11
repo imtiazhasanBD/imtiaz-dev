@@ -12,13 +12,13 @@ import { navLinks } from "../constant/constant";
 import { socialMedia } from "../data/data";
 import GetInTouch from "./GetInTouch";
 import NavbarForMobile from "./NavbarForMobile";
-import { useTheme } from "next-themes"
+import { useTheme } from "next-themes";
+import Link from "next/link";
 
 const Header = () => {
-
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isLeftBarOpen, setIsLeftBarOpen] = useState(false);
-  const {theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme();
 
   const toggleLeftSidebar = () => {
     setIsLeftBarOpen(!isLeftBarOpen);
@@ -28,11 +28,11 @@ const Header = () => {
   };
 
   const toggleTheme = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
-  }
+    setTheme(theme === "light" ? "dark" : "light");
+  };
 
   return (
-    <header className="flex justify-between items-center  dark:bg-customBg bg-coustomLiteBg p-6 md:px-8 md:py-6  text-white rounded-lg">
+    <header className="flex justify-between items-center  dark:bg-customBg bg-coustomLiteBg p-6 md:px-8 md:py-6  text-white rounded-lg w-[95%] sm:w-[80%] mx-auto h-auto md:w-[700px] lg:w-[950px]  xl:w-[1130px] 2xl:min-w-[1280px]">
       <GetInTouch isOpen={isLeftBarOpen} toggleSidebar={toggleLeftSidebar} />
       <NavbarForMobile
         isOpen={isMobileMenuOpen}
@@ -43,29 +43,35 @@ const Header = () => {
       <section className="flex items-center gap-6">
         <div
           onClick={toggleLeftSidebar}
-          className="bg-costomGaryLite dark:bg-customGray cursor-pointer hover:bg-gray-700 transition-colors hidden sm:block"
+          className="cursor-pointer transition-colors hidden sm:block"
         >
           <RiMenu2Line />
         </div>
         {/* Branding */}
-        <div className="flex items-center text-lg lg:text-2xl space-x-2">
-          <FaCode className="text-3xl lg:text-4xl text-customLiteGreen" />
-          <span className=" lg:hidden xl:block">Imtiaz.dev</span>
-        </div>
+        <Link href="/">
+          <div className="flex items-center text-lg lg:text-2xl space-x-2">
+            <FaCode className="text-3xl lg:text-4xl text-customLiteGreen" />
+            <span className=" lg:hidden xl:block">Imtiaz.dev</span>
+          </div>
+        </Link>
       </section>
       {/* Navigation Links */}
       <nav>
         <ul className="hidden lg:flex space-x-8 text-lg">
-          <li className="cursor-pointer text-white hover:text-gray-400 transition-colors">
+          <Link
+            href="/"
+            className="cursor-pointer text-white hover:text-gray-400 transition-colors"
+          >
             Home
-          </li>
+          </Link>
           {navLinks.map((navlink) => (
-            <li
+            <Link
+              href={navlink.url}
               key={navlink.id}
               className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300"
             >
               {navlink.label}
-            </li>
+            </Link>
           ))}
         </ul>
       </nav>
@@ -89,7 +95,7 @@ const Header = () => {
         {/* Theme Icon */}
         <div
           onClick={toggleTheme}
-          className="lg:bg-costomGaryLite dark:lg:bg-customGray cursor-pointer hover:bg-gray-700 transition-colors text-yellow-500 text-2xl lg:text-xl"
+          className="cursor-pointer  transition-colors text-yellow-500 text-2xl lg:text-xl"
         >
           {theme === "light" ? <IoSunnySharp /> : <GiMoon />}
         </div>

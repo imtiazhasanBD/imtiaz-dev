@@ -5,23 +5,11 @@ import { skills, SkillsData } from "../data/data";
 const Skills = () => {
   return (
     <section className="relative bg-white dark:bg-customBg dark:text-white px-4 py-16 rounded-lg shadow-md w-full mt-6 overflow-hidden">
-      <div>
-        <div className="flex items-center justify-center">
-          <svg
-            className="w-2 h-2 mr-2 text-customGreen"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-8a1 1 0 11-2 0 1 1 0 012 0z"
-              clip-rule="evenodd"
-            ></path>
-          </svg>
-          <h2 className="text-base text-customGreen">Projects</h2>
-        </div>
-        <h2 className=" text-2xl lg:text-4xl font-medium  mb-4 text-center">
+      <div className="text-center w-full flex flex-col items-center">
+        <h2 className="flex items-center text-center text-customGreen before:content-[''] before:block before:w-[7px] before:h-[7px] before:bg-customGreen before:rounded-full before:mr-2">
+          Projects
+        </h2>
+        <h2 className="text-2xl lg:text-4xl font-medium  mb-4 text-center">
           My Skills
         </h2>
       </div>
@@ -73,11 +61,11 @@ const Skills = () => {
         <div className="w-full my-auto space-y-2 lg:border-l border-gray-400 dark:border-gray-700 lg:pl-8">
           <ul className="list-disc list-outside">
             {SkillsData.map((skill, i) => (
-              <li key={i} class="flex mb-4 text-gray-700 dark:text-white">
+              <li key={i} className="flex mb-4 text-gray-700 dark:text-white">
                 <LuDot size={"2rem"} className=" bottom-1" />
-                <div class="flex flex-col lg:flex-row gap-2 my-auto">
-                  <p class="font-medium">{skill.category}:</p>
-                  <span class="text-gray-500 my-auto">
+                <div className="flex flex-col lg:flex-row gap-2 my-auto">
+                  <p className="font-medium">{skill.category}:</p>
+                  <span className="text-gray-500 my-auto">
                     {skill.skills.map((skill) => skill + " ")}
                   </span>
                 </div>
@@ -95,8 +83,8 @@ const Skills = () => {
             </div>
           </div>
           <div className="absolute left-[-20px] md:left-[-10px] bottom-0 text-gray-400">
-              <LuDot size={"3rem"} />
-            </div>
+            <LuDot size={"3rem"} />
+          </div>
         </div>
       </div>
     </section>

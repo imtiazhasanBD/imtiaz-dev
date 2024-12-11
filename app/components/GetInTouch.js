@@ -57,7 +57,7 @@ const GetInTouch = ({ isOpen, toggleSidebar }) => {
         {/* Close Button */}
         <CgClose
           onClick={toggleSidebar}
-          className="absolute top-0 right-6 sm:w-8 sm:h-8 w-6 h-6 text-customGreen"
+          className="absolute top-0 right-6 sm:w-8 sm:h-8 w-6 h-6 text-customGreen cursor-pointer"
         />
       </div>
     </div>

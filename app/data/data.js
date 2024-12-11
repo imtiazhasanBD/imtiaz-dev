@@ -189,6 +189,32 @@ export const projectData = [
   },
 ];
 
+export const education = [
+  {
+    title: "Bachelor's in Computer Science",
+    subTitle: "Bangladesh University | 2020 - 2024",
+    description: "Focused on software development, web technologies, and data structures. Graduating with a distinction.",
+  },
+  {
+    title: "High School Diploma",
+    subTitle: "City College | 2018 - 2020",
+    description: "Specialized in Science with a focus on mathematics and physics.",
+  },
+];
+
+export const experience = [
+  {
+    title: "Frontend Developer Intern",
+    subTitle: "Tech Solutions | Jan 2024 - Present",
+    description: "Developed responsive web applications using React, Tailwind, and TypeScript. Collaborated with designers to enhance UX.",
+  },
+  {
+    title: "Freelance Web Developer",
+    subTitle: "Remote | 2022 - 2023",
+    description: "Built custom websites and dashboards for small businesses using.",
+  },
+];
+
 export const hobbies = [
   { id: 1, name: "Gaming", icon: "🎮" },
   { id: 2, name: "Traveling", icon: "✈️" },
@@ -199,14 +225,14 @@ export const hobbies = [
 
 export const contactData = [
   { name: "Phone", info: "+8801783638383", icon: <FiPhone /> },
-  { name: "Email", info: "imtiaz.dev@gmail.com", icon: <LuMail /> },
+  { name: "Email", info: "imtiazbd.dev@gmail.com", icon: <LuMail /> },
   {
     name: "Linkdin",
     info: "/imtiazhasanbd",
     icon: <FaLinkedin />,
   },
    {
-    name: "Adress",
+    name: "Address",
     info: "Kallyanpur,Dhaka-1207,Bangladesh",
     icon: <IoHomeOutline />,
   }
