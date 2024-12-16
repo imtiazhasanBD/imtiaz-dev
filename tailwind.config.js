@@ -11,6 +11,8 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 8s linear infinite',
         'spin-slower': 'spin 50s linear infinite',
+        bounce: "bounce 1s infinite",
+
       },
       colors: {
          background: "#1F1F24",

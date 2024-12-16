@@ -4,6 +4,7 @@ import { contactData } from "../data/data";
 import { toast } from "react-toastify";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { usePathname } from "next/navigation";
 
 export default function Contact() {
   const { theme } = useTheme();
@@ -64,9 +65,12 @@ export default function Contact() {
       resetForm(); // Reset form after successful submission
     }
   };
-
+  
+   const pathName = usePathname();
+   
+   
   return (
-    <div className="my-40 px-2 lg:px-0">
+    <div className={`${pathName === "/contact"? "mt-10" : "mt-40"} px-2 lg:px-0`}>
       <h2 className="text-2xl lg:text-4xl font-medium text-customGreen mb-8">
         Let's connect
       </h2>

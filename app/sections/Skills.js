@@ -25,10 +25,10 @@ const Skills = () => {
                 className="w-[400px]"
               >
                 <div className="flex space-x-8 pr-6">
-                  {skills.map((skill, i) => (
+                  {skills[0].technologies.map((skill, i) => (
                     <span
                       key={i}
-                      className={`text-4xl ${skill.color} p-5 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-costomGaryLite`}
+                      className={`text-4xl p-5 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-costomGaryLite`}
                     >
                       {skill.icon}
                     </span>
@@ -42,13 +42,22 @@ const Skills = () => {
                 gradient={false}
                 speed={30}
                 pauseOnHover
+                autoFill
                 className="w-[350px] md:w-[400px]"
               >
                 <div className="flex space-x-8 pr-6">
-                  {skills.map((skill, i) => (
+                  {skills[1].technologies.map((skill, i) => (
                     <span
                       key={i}
-                      className={`text-4xl ${skill.color} p-5 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-costomGaryLite`}
+                      className={`text-4xl p-5 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-costomGaryLite`}
+                    >
+                      {skill.icon}
+                    </span>
+                  ))}
+                  {skills[2].technologies.map((skill, i) => (
+                    <span
+                      key={i}
+                      className={`text-4xl p-5 rounded-lg border border-gray-300 dark:border-gray-700 hover:bg-costomGaryLite`}
                     >
                       {skill.icon}
                     </span>
@@ -62,11 +71,13 @@ const Skills = () => {
           <ul className="list-disc list-outside">
             {SkillsData.map((skill, i) => (
               <li key={i} className="flex mb-4 text-gray-700 dark:text-white">
-                <LuDot size={"2rem"} className=" bottom-1" />
+                <LuDot size={"2rem"} className="bottom-1" />
                 <div className="flex flex-col lg:flex-row gap-2 my-auto">
                   <p className="font-medium">{skill.category}:</p>
                   <span className="text-gray-500 my-auto">
-                    {skill.skills.map((skill) => skill + " ")}
+                    {skill.skills.map((subSkill, j) =>
+                      j === skill.skills.length - 1 ? subSkill : subSkill + ", "
+                    )}
                   </span>
                 </div>
               </li>

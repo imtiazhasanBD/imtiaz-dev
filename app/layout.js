@@ -5,6 +5,7 @@ import { ThemeProvider } from "./components/ThemeProvider";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ScrollToTop from "./components/ScrollToTop";
+import { Footer } from "./components/Footer";
 
 const dmMono = DM_Mono({
   subsets: ["latin"], // You can add more subsets if needed
@@ -21,7 +22,7 @@ export default function RootLayout({ children }) {
 
 
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body className={`${dmMono.className} dark:bg-background bg-gray-200`}>
       <ThemeProvider
             attribute="class"
@@ -31,9 +32,10 @@ export default function RootLayout({ children }) {
           >
             <Header/>
             {children}
-          </ThemeProvider>
           <ToastContainer/>
           <ScrollToTop/>
+          <Footer/>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -19,7 +19,6 @@ export default function Home() {
       <Skills />
       <EducationExperience/>
       <Contact />
-      <Footer />
     </div>
   );
 }

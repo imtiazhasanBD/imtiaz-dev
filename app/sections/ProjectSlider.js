@@ -9,10 +9,10 @@ import "swiper/css/autoplay";
 import Image from "next/image";
 import { TfiNewWindow } from "react-icons/tfi";
 import { FaGithub } from "react-icons/fa";
-import Link from "next/link";
-import { projectData } from "../data/data";
+import Link from "next/link";;
 import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 import { useRef, useEffect } from "react";
+import { projects } from "../data/data";
 
 const ProjectSlider = () => {
   const prevRef = useRef(null);
@@ -55,7 +55,7 @@ const ProjectSlider = () => {
           swiper.navigation.update();
         }}
       >
-        {projectData.map((project) => (
+        {projects.map((project) => (
           <SwiperSlide key={project.id}>
             <div className="flex flex-col lg:flex-row gap-10 p-4 md:p-8 border border-gray-300 dark:border-gray-700 mt-8 relative">
               {/* Project Image */}
@@ -75,7 +75,7 @@ const ProjectSlider = () => {
                   {project.name}
                 </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                  {project.description}
+                  {project.shortDescription}
                 </p>
 
                 {/* Project Info */}
@@ -105,13 +105,13 @@ const ProjectSlider = () => {
                     <span className="font-medium text-gray-800 dark:text-white">
                       Technology:
                     </span>{" "}
-                    {project.technology}
+                    {project.technologiesUsed.frontEnd}
                   </p>
                   <p className="text-gray-600 dark:text-gray-400 border-b border-gray-300 dark:border-gray-700 pb-3">
                     <span className="font-medium text-gray-800 dark:text-white">
                       Tools:
                     </span>{" "}
-                    {project.tools}
+                    {project.technologiesUsed.backEnd + " "+ project.technologiesUsed.paymentIntegration}
                   </p>
                 </div>
 

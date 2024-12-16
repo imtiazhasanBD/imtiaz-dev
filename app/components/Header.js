@@ -14,6 +14,7 @@ import GetInTouch from "./GetInTouch";
 import NavbarForMobile from "./NavbarForMobile";
 import { useTheme } from "next-themes";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -31,8 +32,10 @@ const Header = () => {
     setTheme(theme === "light" ? "dark" : "light");
   };
 
+  const pathName = usePathname();
+
   return (
-    <header className="flex justify-between items-center  dark:bg-customBg bg-coustomLiteBg p-6 md:px-8 md:py-6  text-white rounded-lg w-[95%] sm:w-[80%] mx-auto h-auto md:w-[700px] lg:w-[950px]  xl:w-[1130px] 2xl:min-w-[1280px]">
+    <header className="flex justify-between items-center  dark:bg-customBg bg-coustomLiteBg p-6 md:px-8 md:py-6  text-white rounded-lg w-[95%] sm:w-[80%] mx-auto h-auto md:w-[700px] lg:w-[950px]  xl:w-[1130px] 2xl:min-w-[1280px] mt-7">
       <GetInTouch isOpen={isLeftBarOpen} toggleSidebar={toggleLeftSidebar} />
       <NavbarForMobile
         isOpen={isMobileMenuOpen}
@@ -58,17 +61,12 @@ const Header = () => {
       {/* Navigation Links */}
       <nav>
         <ul className="hidden lg:flex space-x-8 text-lg">
-          <Link
-            href="/"
-            className="cursor-pointer text-white hover:text-gray-400 transition-colors"
-          >
-            Home
-          </Link>
           {navLinks.map((navlink) => (
             <Link
               href={navlink.url}
               key={navlink.id}
-              className="cursor-pointer text-gray-400 hover:text-white transition-colors duration-300"
+              prefetch={false}
+              className={`cursor-pointer text-gray-400 hover:text-white transition-colors duration-300 ${pathName===navlink.url? 'text-white' : ''}`}
             >
               {navlink.label}
             </Link>

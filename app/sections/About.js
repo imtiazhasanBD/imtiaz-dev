@@ -51,7 +51,7 @@ const About = () => {
           </h2>
           <div className="space-y-2 mt-10">
             {hobbies.map((hobby) => (
-              <p className="flex items-center ju text-gray-400 before:content-[''] before:block before:w-[7px] before:h-[7px] before:bg-customGreen before:rounded-full before:mr-2">
+              <p key={hobby.id} className="flex items-center ju text-gray-400 before:content-[''] before:block before:w-[7px] before:h-[7px] before:bg-customGreen before:rounded-full before:mr-2">
                 {hobby.name}
               </p>
             ))}

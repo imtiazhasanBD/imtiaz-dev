@@ -1,13 +1,4 @@
 import {
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaReact,
-  FaNodeJs,
-  FaGitAlt,
-} from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
-import {
   FaFacebook,
   FaTwitter,
   FaInstagram,
@@ -18,6 +9,9 @@ import {
   FaPinterest,
   FaWhatsapp,
 } from "react-icons/fa";
+import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa';
+import { SiNextdotjs, SiTailwindcss, SiRedux, SiFirebase, SiTypescript, SiStripe, SiVisualstudiocode } from 'react-icons/si';
+import { VscVscode } from "react-icons/vsc";
 import { FiPhone } from "react-icons/fi";
 import { LuMail } from "react-icons/lu";
 import { IoHomeOutline } from "react-icons/io5";
@@ -32,80 +26,72 @@ export const BaseInfo = {
   aboutPic: "/images/about_me.jpg",
 };
 
-export const skills = [
-  { name: "HTML", icon: <FaHtml5 />, color: "text-orange-500", percentage: 80 },
-  { name: "CSS", icon: <FaCss3Alt />, color: "text-blue-500", percentage: 70 },
-  {
-    name: "JavaScript",
-    icon: <FaJs />,
-    color: "text-yellow-500",
-    percentage: 80,
-  },
-  { name: "React", icon: <FaReact />, color: "text-blue-400", percentage: 70 },
-  {
-    name: "Next.js",
-    icon: <SiNextdotjs />,
-    color: "text-black",
-    percentage: 65,
-  },
-  {
-    name: "Tailwind CSS",
-    icon: <SiTailwindcss />,
-    color: "text-teal-500",
-    percentage: 80,
-  },
-  { name: "Git", icon: <FaGitAlt />, color: "text-red-500", percentage: 70 },
-  {
-    name: "Node.js",
-    icon: <FaNodeJs />,
-    color: "text-green-500",
-    percentage: 50,
-  },
-];
+export  const skills = [
+    {
+      category: 'Frontend',
+      technologies: [
+        { name: 'HTML', icon: <FaHtml5 className="text-orange-600" /> },
+        { name: 'CSS', icon: <FaCss3Alt className="text-blue-600" /> },
+        { name: 'JavaScript', icon: <FaJsSquare className="text-yellow-500" /> },
+        { name: 'React', icon: <FaReact className="text-blue-500" /> },
+        { name: 'Next.js', icon: <SiNextdotjs className="text-gray-900" /> },
+        { name: 'Tailwind', icon: <SiTailwindcss className="text-teal-400" /> },
+        { name: 'TypeScript', icon: <SiTypescript className="text-blue-600" /> },
+      ],
+    },
+    {
+      category: 'Backend Basics',
+      technologies: [
+        { name: 'Node.js', icon: <FaNodeJs className="text-green-600" /> },
+        { name: 'Firebase', icon: <SiFirebase className="text-orange-500" /> },
+      ],
+    },
+    {
+      category: 'Tools',
+      technologies: [
+        { name: 'Git', icon: <FaGitAlt className="text-orange-500" /> },
+        { name: 'VS Code', icon: <VscVscode className="text-blue-400" /> },
+        { name: 'Stripe', icon: <SiStripe className="text-indigo-600" /> },
+      ],
+    },
+  ];
+
 
 export const SkillsData = [
   {
-    category: "Front-End",
+    category: "Frontend",
     skills: [
       "HTML",
       "CSS",
       "JavaScript",
+      "Tailwind",
       "React",
-      "Angular"
+      "Redux Toolkit",
+      "Next.js"
+      
     ]
   },
   {
-    category: "Back-End",
+    category: "Backend Basics",
     skills: [
       "Node.js",
-      "Express",
-      "Python",
-      "Django"
+      "Firebase",
     ]
   },
   {
-    category: "Databases",
-    skills: [
-      "MySQL",
-      "PostgreSQL",
-      "MongoDB"
-    ]
-  },
-  {
-    category: "Tools & Platforms",
+    category: "Tools",
     skills: [
       "Git",
-      "Docker",
-      "AWS",
-      "Heroku"
+      "VS Code",
+      "Stripe",
     ]
   },
   {
     category: "Others",
     skills: [
-      "RESTful APIs",
-      "GraphQL",
-      "Agile Methodologies"
+      "PhotoShop",
+      "Canva",
+      "Microsoft Office"
     ]
   }
 ];
@@ -144,60 +130,133 @@ export const socialMedia = [
   },
 ];
 
-export const projectData = [
+export const projects = [
   {
     id: 1,
-    name: "Electro-mart",
-    description:
-      "An eCommerce platform built with React and Redux Toolkit, featuring a modern UI styled with Tailwind CSS. It includes secure user authentication via Firebase, real-time order storage, and seamless payment integration using Stripe.",
-    image: "/images/Electro-mart.jpg",
-    category: "eCommerce WebSite",
-    technology: "React, Redux, TailWind",
-    tools: "Firebase, Stripe, Firebase",
+    name: "ECommerce Platform",
+    shortDescription:
+      "A modern eCommerce platform with React, Redux Toolkit, Firebase, and Stripe integration, delivering a seamless shopping experience.",
+    longDescription:
+      "An advanced eCommerce platform built with React and Redux Toolkit, offering a modern and responsive UI styled with Tailwind CSS. The platform is equipped with secure user authentication via Firebase, real-time order management, and seamless payment processing powered by Stripe. Designed with a focus on usability and performance, it ensures a smooth, reliable, and enjoyable online shopping experience for users. The project highlights scalable architecture and optimized workflows for both users and administrators.",
+    keyFeatures: [
+      "Modern User Interface: A visually appealing, responsive design created using Tailwind CSS for an intuitive shopping experience across devices.",
+      "Real-Time Order Management: Firebase integration enables real-time synchronization of user orders and inventory data.",
+      "Secure Authentication: Firebase Authentication ensures secure user login, registration, and account management.",
+      "Seamless Payment Gateway: Integrated Stripe API for secure and efficient payment processing with multiple payment options.",
+      "Product Search and Filters: Advanced search and filtering options for easy product discovery.",
+      "Admin Panel: Features an intuitive dashboard for managing products, orders, and users efficiently.",
+    ],
+    technologiesUsed: {
+      frontEnd: "React, Redux Toolkit, Tailwind CSS",
+      backEnd: "Firebase (Database and Authentication)",
+      paymentIntegration: "Stripe API",
+    },
+    designHighlights: {
+      visualAppeal:
+        "A clean, modern design with a polished layout, vibrant colors, and clear navigation, enhancing user engagement.",
+      usability:
+        "A user-centric experience with responsive layouts, intuitive controls, and streamlined workflows.",
+      performance:
+        "Optimized for fast load times, smooth transitions, and high scalability to handle a large user base effectively.",
+    },
     url: {
       live: "",
       github: "https://github.com/imtiazhasanBD/Electro-mart",
     },
+    image: "/images/Electro-mart.jpg",
+    category: "eCommerce Website",
+    screenShot: [
+      "/images/screenshot/Electro-mart(ss01).webp",
+      "/images/screenshot/Electro-mart(ss02).webp",
+      "/images/screenshot/Electro-mart(ss03).webp",
+      "/images/screenshot/Electro-mart(ss04).webp",
+      "/images/screenshot/Electro-mart(ss05).webp",
+    ]
   },
   {
     id: 2,
     name: "Disney Clone",
-    description:
-      "A static Disney+ clone built with React and styled using Tailwind CSS, showcasing a responsive and visually appealing design. This project replicates the look and feel of the Disney+ platform, focusing on clean UI and layout structure.",
-    image: "/images/disney _clone.jpg",
-    category: "eCommerce WebSite",
-    technology: "React, TailWind",
-    tools: "Firebase, Stripe, Firebase",
+    shortDescription:
+      "A static Disney+ clone built with React and styled using Tailwind CSS, showcasing responsive design and clean UI aesthetics.",
+    longDescription:
+      "Disney+ Clone is a visually stunning static replica of the popular Disney+ streaming platform. Built with React and styled using Tailwind CSS, the project focuses on replicating the look and feel of the platform with a responsive layout and clean UI. This project demonstrates proficiency in frontend development, showcasing attention to detail and responsiveness in web design.",
+    keyFeatures: [
+      "Pixel-Perfect UI: Accurately replicates the Disney+ platform design, focusing on layout and visual fidelity.",
+      "Responsive Design: Optimized for all devices, ensuring consistent user experience across various screen sizes.",
+      "Clean and Organized Code: Demonstrates best practices in writing modular and reusable components.",
+    ],
+    technologiesUsed: {
+      frontEnd: "React, Tailwind CSS",
+    },
+    designHighlights: {
+      visualAppeal:
+        "Replicates Disney+ design with high-quality visuals and consistent color schemes.",
+      usability:
+        "Focused on intuitive navigation and responsive elements for all devices.",
+      performance: "Ensures smooth transitions and a lightweight build.",
+    },
     url: {
-      live: "",
+      live: "https://disney-clone-bd.vercel.app",
       github: "https://github.com/imtiazhasanBD/disney-clone",
     },
+    image: "/images/disney _clone.jpg",
+    category: "Web App Clone",
+    screenShot: [
+      "/images/screenshot/Electro-mart(ss01).webp",
+      "/images/screenshot/Electro-mart(ss02).webp",
+      "/images/screenshot/Electro-mart(ss03).webp",
+      "/images/screenshot/Electro-mart(ss04).webp",
+      "/images/screenshot/Electro-mart(ss05).webp",
+    ]
   },
   {
     id: 3,
-    name: "Ecart-mart",
-    description:
-      "My first eCommerce website, built with raw HTML, CSS, and JavaScript. It was my first step into web development, where I transformed my learning into a tangible project, igniting my passion for creating user-friendly, functional designs.",
-    image: "/images/Ecart-mart.jpg",
-    category: "eCommerce WebSite",
-    technology: "React, Redux, TailWind",
-    tools: "Firebase, Stripe, Firebase",
+    name: "Ecart-Mart",
+    shortDescription:
+      "A beginner-friendly eCommerce website built using raw HTML, CSS, and JavaScript, showcasing early web development skills.",
+    longDescription:
+      "Ecart-Mart is my first eCommerce project, developed during the initial stages of my web development journey. Built with raw HTML, CSS, and JavaScript, this project was a foundational step in learning how to create functional websites. It features a basic shopping cart and responsive design, serving as a significant milestone in understanding core web technologies.",
+    keyFeatures: [
+      "Static Design: Built with HTML and CSS, featuring a simple but functional layout.",
+      "Basic Shopping Cart: Enabled adding and removing items to simulate an eCommerce experience.",
+      "Responsive Design: Optimized for basic device compatibility.",
+    ],
+    technologiesUsed: {
+      frontEnd: "HTML, CSS, JavaScript",
+    },
+    designHighlights: {
+      visualAppeal:
+        "Focused on fundamental design principles with a clean and simple layout.",
+      usability:
+        "User-friendly for basic interactions, demonstrating the core functionalities of a shopping website.",
+      performance: "Lightweight and efficient for basic web needs.",
+    },
     url: {
       live: "https://imtiazhasanbd.github.io/MyEcommerce-cart/",
       github: "https://github.com/imtiazhasanBD/MyEcommerce-cart",
     },
+    image: "/images/Ecart-mart.jpg", // Replace with your project image path
+    category: "Beginner eCommerce Website",
+    screenShot: [
+      "/images/screenshot/Electro-mart(ss01).webp",
+      "/images/screenshot/Electro-mart(ss02).webp",
+      "/images/screenshot/Electro-mart(ss03).webp",
+      "/images/screenshot/Electro-mart(ss04).webp",
+      "/images/screenshot/Electro-mart(ss05).webp",
+    ]
   },
 ];
+
 
 export const education = [
   {
     title: "Bachelor's in Computer Science",
-    subTitle: "Bangladesh University | 2020 - 2024",
+    subTitle: "Bangladesh University | 2024 - Present",
     description: "Focused on software development, web technologies, and data structures. Graduating with a distinction.",
   },
   {
-    title: "High School Diploma",
-    subTitle: "City College | 2018 - 2020",
+    title: "Diploma in Electrical Engineering",
+    subTitle: "Ahsanullah Institute(AITVET) | 2014 - 2018",
     description: "Specialized in Science with a focus on mathematics and physics.",
   },
 ];
@@ -236,34 +295,4 @@ export const contactData = [
     info: "Kallyanpur,Dhaka-1207,Bangladesh",
     icon: <IoHomeOutline />,
   }
-];
-
-export const projects = [
-  {
-    id: 1,
-    name: "E-Learning Platform",
-    description:
-      "An eCommerce platform built with React and Redux Toolkit, featuring a modern UI styled with Tailwind CSS. It includes secure user authentication via Firebase, real-time order storage, and seamless payment integration using Stripe.",
-    category: "Frontend Development",
-    technology: "React, Tailwind",
-    tools: "Firebase, Stripe",
-    image: "/images/Electro-mart.jpg",
-    url: {
-      live: "https://e-learning-platform.com",
-      github: "https://github.com/username/e-learning",
-    },
-  },
-  {
-    id: 2,
-    name: "Mobile Banking App",
-    description: "Secure and user-friendly mobile banking app.",
-    category: "Mobile Development",
-    technology: "React Native, Redux",
-    tools: "Firebase, Stripe",
-    image: "/images/Electro-mart.jpg",
-    url: {
-      live: "https://mobile-banking.com",
-      github: "https://github.com/username/mobile-banking",
-    },
-  },
 ];
