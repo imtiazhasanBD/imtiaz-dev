@@ -1,3 +1,8 @@
+export const generateMetadata = () => ({
+  title: "About Me - Imtiaz Hasan",
+  description: "Learn more about Imtiaz Hasan, a passionate front-end developer with expertise in modern web technologies.",
+});
+
 export default function About() {
   return (
     <div className="w-[95%] sm:w-[80%] mx-auto h-auto md:w-[700px] lg:w-[950px]  xl:w-[1130px] 2xl:min-w-[1280px] py-10">
@@ -35,7 +40,7 @@ export default function About() {
             As I near the completion of my studies, I am actively seeking job
             opportunities to apply my skills, contribute to impactful projects,
             and grow as a professional. I am dedicated to crafting dynamic,
-            responsive, and user-friendly web experiences. Let's build
+            responsive, and user-friendly web experiences. Let&apos;s build
             something amazing together!
           </p>
         </div>

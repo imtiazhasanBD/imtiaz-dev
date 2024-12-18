@@ -9,7 +9,7 @@ const About = () => {
         About Me
       </h2>
       <h2 className="text-xl md:text-2xl lg:text-3xl font-medium mb-4">
-        let’s Introduce about myself
+         Let&apos;s Introduce about myself
       </h2>
 
       <div className="w-full group flex flex-col lg:flex-row items-start gap-6 lg:gap-10 mt-10 lg:mt-16">
@@ -27,17 +27,17 @@ const About = () => {
             </div>
             <div>
               <p className="px-4 py-2 text-customGreen bg-gray-500 bg-opacity-25 dark:bg-black dark:bg-opacity-25 rounded-lg flex justify-center items-center shadow-shadowOne text-sm font-medium">
-                1 Year Experience
+                6 Months Experience
               </p>
             </div>
           </div>
           <p className="text-sm md:text-base font-medium text-gray-400 duration-300">
-            I'm a passionate Frontend Developer with expertise in building
+            I&apos;m a passionate Frontend Developer with expertise in building
             modern, responsive, and dynamic web applications. I specialize in
             React, Next.js, TypeScript, and Tailwind CSS. My focus is on
             crafting seamless user interfaces and maintaining clean, efficient
             code. With a background in computer science, I enjoy solving
-            problems and bringing ideas to life. When I’m not coding, you’ll
+            problems and bringing ideas to life. When I&apos;m not coding, you&apos;ll
             find me exploring new technologies or contributing to open-source
             projects.
           </p>

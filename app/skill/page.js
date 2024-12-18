@@ -1,42 +1,13 @@
-'use client';
-
 import React from 'react';
-import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa';
-import { SiNextdotjs, SiTailwindcss, SiRedux, SiFirebase, SiTypescript, SiStripe, SiVisualstudiocode } from 'react-icons/si';
-import { VscVscode } from "react-icons/vsc";
+import { skills } from '../data/data';
+
+export const generateMetadata = () => ({
+  title: "My Skills - Imtiaz Hasan",
+  description: "Discover my technical skills, including React, Tailwind CSS, Firebase, and more.",
+});
 
 
 const page = () => {
-  const skills = [
-    {
-      category: 'Frontend Development',
-      technologies: [
-        { name: 'HTML', icon: <FaHtml5 className="text-orange-600" /> },
-        { name: 'CSS', icon: <FaCss3Alt className="text-blue-600" /> },
-        { name: 'JavaScript', icon: <FaJsSquare className="text-yellow-500" /> },
-        { name: 'React', icon: <FaReact className="text-blue-500" /> },
-        { name: 'Next.js', icon: <SiNextdotjs className="text-gray-900" /> },
-        { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-teal-400" /> },
-        { name: 'Redux Toolkit', icon: <SiRedux className="text-purple-600" /> },
-        { name: 'TypeScript', icon: <SiTypescript className="text-blue-600" /> },
-      ],
-    },
-    {
-      category: 'Backend Basics',
-      technologies: [
-        { name: 'Node.js', icon: <FaNodeJs className="text-green-600" /> },
-        { name: 'Firebase', icon: <SiFirebase className="text-orange-500" /> },
-      ],
-    },
-    {
-      category: 'Tools',
-      technologies: [
-        { name: 'Git', icon: <FaGitAlt className="text-orange-500" /> },
-        { name: 'VS Code', icon: <VscVscode className="text-blue-400" /> },
-        { name: 'Stripe', icon: <SiStripe className="text-indigo-600" /> },
-      ],
-    },
-  ];
 
   return (
     <div className="text-black dark:text-white w-[95%] sm:w-[80%] mx-auto h-auto md:w-[700px] lg:w-[950px]  xl:w-[1130px] 2xl:min-w-[1280px] mt-20">
@@ -50,7 +21,7 @@ const page = () => {
           {skills.map((skillCategory, index) => (
             <div key={index} className="lg:p-6">
               <h2 className="text-2xl font-medium text-gray-800 dark:text-gray-200 mb-4">{skillCategory.category}</h2>
-              <div className="grid grid-cols-4 lg:grid-cols-8">
+              <div className="grid grid-cols-4 lg:grid-cols-8 gap-4">
                 {skillCategory.technologies.map((tech, idx) => (
                   <div
                     key={idx}

@@ -6,6 +6,7 @@ import Marquee from "react-fast-marquee";
 import { FiDownload } from "react-icons/fi";
 import { FaHandshake } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
+import Link from "next/link";
 
 const Hero = () => {
   const words = "Hey, I’m Imtiaz";
@@ -19,7 +20,7 @@ const Hero = () => {
           <Image
             src="/images/hero_photo_new.png"
             alt="Picture of the author"
-            layout="resposive"
+            priority
             width={450}
             height={450}
           />
@@ -129,12 +130,12 @@ const Hero = () => {
               Download CV
             </p>
           </button>
-          <button className="flex space-x-2 justify-center items-center">
+          <Link href='/contact' className="flex space-x-2 justify-center items-center">
             <FaHandshake className="text-2xl text-customGreen" />
             <p className="text-sm text-gray-700 dark:text-gray-400 font-medium">
               Hire Me
             </p>
-          </button>
+          </Link>
         </div>
       </div>
     </div>

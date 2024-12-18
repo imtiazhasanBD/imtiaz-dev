@@ -1,5 +1,4 @@
 import React from "react";
-import { navLinks } from "../constant/constant";
 import { CgClose } from "react-icons/cg";
 import { contactData, socialMedia } from "../data/data";
 
@@ -24,7 +23,7 @@ const GetInTouch = ({ isOpen, toggleSidebar }) => {
         <h1 className="text-4xl text-black dark:text-white border-b border-customGreen pb-8 font-medium">Get in touch</h1>
         <div className="text-slate-600 dark:text-slate-300">
           <p className="">
-            I'm always excited to take on new projects and collaborate with
+          I&apos;m always excited to take on new projects and collaborate with
             innovative minds.
           </p>
           <ul className="space-y-4 mt-6">

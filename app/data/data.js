@@ -133,7 +133,7 @@ export const socialMedia = [
 export const projects = [
   {
     id: 1,
-    name: "ECommerce Platform",
+    name: "eCommerce Platform",
     shortDescription:
       "A modern eCommerce platform with React, Redux Toolkit, Firebase, and Stripe integration, delivering a seamless shopping experience.",
     longDescription:
@@ -163,7 +163,7 @@ export const projects = [
       live: "",
       github: "https://github.com/imtiazhasanBD/Electro-mart",
     },
-    image: "/images/Electro-mart.jpg",
+    image: "/images/Electro-mart.webp",
     category: "eCommerce Website",
     screenShot: [
       "/images/screenshot/Electro-mart(ss01).webp",
@@ -171,6 +171,13 @@ export const projects = [
       "/images/screenshot/Electro-mart(ss03).webp",
       "/images/screenshot/Electro-mart(ss04).webp",
       "/images/screenshot/Electro-mart(ss05).webp",
+      "/images/screenshot/Electro-mart(ss06).webp",
+      "/images/screenshot/Electro-mart(ss07).webp",
+      "/images/screenshot/Electro-mart(ss08).webp",
+      "/images/screenshot/Electro-mart(ss09).webp",
+      "/images/screenshot/Electro-mart(ss10).webp",
+      "/images/screenshot/Electro-mart(ss11).webp",
+      "/images/screenshot/Electro-mart(ss12).webp",
     ]
   },
   {
@@ -199,14 +206,12 @@ export const projects = [
       live: "https://disney-clone-bd.vercel.app",
       github: "https://github.com/imtiazhasanBD/disney-clone",
     },
-    image: "/images/disney _clone.jpg",
+    image: "/images/disney _clone.webp",
     category: "Web App Clone",
     screenShot: [
-      "/images/screenshot/Electro-mart(ss01).webp",
-      "/images/screenshot/Electro-mart(ss02).webp",
-      "/images/screenshot/Electro-mart(ss03).webp",
-      "/images/screenshot/Electro-mart(ss04).webp",
-      "/images/screenshot/Electro-mart(ss05).webp",
+      "/images/disney _clone.webp",
+      "/images/screenshot/disney _clone(ss 02).webp",
+      "/images/screenshot/disney _clone(ss 03).webp"
     ]
   },
   {
@@ -232,17 +237,19 @@ export const projects = [
       performance: "Lightweight and efficient for basic web needs.",
     },
     url: {
-      live: "https://imtiazhasanbd.github.io/MyEcommerce-cart/",
+      live: "https://imtiazhasanbd.github.io/MyEcommerce-cart",
       github: "https://github.com/imtiazhasanBD/MyEcommerce-cart",
     },
-    image: "/images/Ecart-mart.jpg", // Replace with your project image path
+    image: "/images/Ecart-mart.jpg", 
     category: "Beginner eCommerce Website",
     screenShot: [
-      "/images/screenshot/Electro-mart(ss01).webp",
-      "/images/screenshot/Electro-mart(ss02).webp",
-      "/images/screenshot/Electro-mart(ss03).webp",
-      "/images/screenshot/Electro-mart(ss04).webp",
-      "/images/screenshot/Electro-mart(ss05).webp",
+      "/images/screenshot/Ecart-mart(ss01).webp",
+      "/images/screenshot/Ecart-mart(ss02).webp",
+      "/images/screenshot/Ecart-mart(ss03).webp",
+      "/images/screenshot/Ecart-mart(ss04).webp",
+      "/images/screenshot/Ecart-mart(ss05).webp",
+      "/images/screenshot/Ecart-mart(ss06).webp",
+      "/images/screenshot/Ecart-mart(ss07).webp",
     ]
   },
 ];
@@ -257,19 +264,19 @@ export const education = [
   {
     title: "Diploma in Electrical Engineering",
     subTitle: "Ahsanullah Institute(AITVET) | 2014 - 2018",
-    description: "Specialized in Science with a focus on mathematics and physics.",
+    description: "Specialized in Electrical Engineering with a focus on power systems and circuit analysis.",
   },
 ];
 
 export const experience = [
   {
-    title: "Frontend Developer Intern",
-    subTitle: "Tech Solutions | Jan 2024 - Present",
-    description: "Developed responsive web applications using React, Tailwind, and TypeScript. Collaborated with designers to enhance UX.",
+    title: "Frontend Developer",
+    subTitle: "Local Client | Sep 2024 - Nov 2024 ",
+    description: "Developed responsive web applications using React and Tailwind. Collaborated with designers to enhance UX.",
   },
   {
     title: "Freelance Web Developer",
-    subTitle: "Remote | 2022 - 2023",
+    subTitle: "Remote | Aug 2024 - Sep 2024",
     description: "Built custom websites and dashboards for small businesses using.",
   },
 ];
@@ -286,7 +293,7 @@ export const contactData = [
   { name: "Phone", info: "+8801783638383", icon: <FiPhone /> },
   { name: "Email", info: "imtiazbd.dev@gmail.com", icon: <LuMail /> },
   {
-    name: "Linkdin",
+    name: "Linkedin",
     info: "/imtiazhasanbd",
     icon: <FaLinkedin />,
   },

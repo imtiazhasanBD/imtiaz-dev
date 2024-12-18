@@ -9,7 +9,7 @@ import "swiper/css/autoplay";
 import Image from "next/image";
 import { TfiNewWindow } from "react-icons/tfi";
 import { FaGithub } from "react-icons/fa";
-import Link from "next/link";;
+import Link from "next/link";
 import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 import { useRef, useEffect } from "react";
 import { projects } from "../data/data";
@@ -60,20 +60,24 @@ const ProjectSlider = () => {
             <div className="flex flex-col lg:flex-row gap-10 p-4 md:p-8 border border-gray-300 dark:border-gray-700 mt-8 relative">
               {/* Project Image */}
               <div className="lg:w-2/4 w-full h-full overflow-hidden">
-                <Image
-                  src={project.image}
-                  alt={project.name}
-                  width={400}
-                  height={500}
-                  className="w-full lg:w-auto h-auto"
-                />
+                <Link href={`/projects/${project.name}`}>
+                  <Image
+                    src={project.image}
+                    alt={project.name}
+                    width={400}
+                    height={500}
+                    className="w-full lg:w-auto h-auto"
+                  />
+                </Link>
               </div>
 
               {/* Project Details */}
               <div className="lg:w-4/6">
-                <h3 className="text-2xl lg:text-3xl font-medium text-customGreen mb-4">
-                  {project.name}
-                </h3>
+                <Link href={`/projects/${project.name}`}>
+                  <h3 className="text-2xl lg:text-3xl font-medium text-customGreen mb-4">
+                    {project.name}
+                  </h3>
+                </Link>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
                   {project.shortDescription}
                 </p>
@@ -111,7 +115,12 @@ const ProjectSlider = () => {
                     <span className="font-medium text-gray-800 dark:text-white">
                       Tools:
                     </span>{" "}
-                    {project.technologiesUsed.backEnd + " "+ project.technologiesUsed.paymentIntegration}
+                    {project.technologiesUsed.backEnd &&
+                    project.technologiesUsed.paymentIntegration
+                      ? project.technologiesUsed.backEnd +
+                        " " +
+                        project.technologiesUsed.paymentIntegration
+                      : "None"}
                   </p>
                 </div>
 

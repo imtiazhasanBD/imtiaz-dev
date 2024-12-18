@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function Contact() {
   const { theme } = useTheme();
@@ -65,15 +66,17 @@ export default function Contact() {
       resetForm(); // Reset form after successful submission
     }
   };
-  
-   const pathName = usePathname();
-   
-   
+
+  const pathName = usePathname();
+
   return (
-    <div className={`${pathName === "/contact"? "mt-10" : "mt-40"} px-2 lg:px-0`}>
+    <div
+      className={`${pathName === "/contact" ? "mt-10" : "mt-40"} px-2 lg:px-0`}
+    >
       <h2 className="text-2xl lg:text-4xl font-medium text-customGreen mb-8">
-        Let's connect
+        Let&apos;s connect
       </h2>
+
       <div className="lg:flex justify-between gap-20 items-center space-y-12">
         {/* Left: Contact Form */}
         <div className="lg:w-3/5">
@@ -199,14 +202,26 @@ export default function Contact() {
         <div className="lg:w-1/2">
           <ul className="space-y-6">
             {contactData.map((contact, i) => (
+              //    mailto:${contact.info}
               <li key={i} className="flex items-center gap-6">
-                <span className="text-customGreen text-xl bg-white dark:bg-customBg p-5 border-gray-600 rounded-lg">
-                  {contact.icon}
-                </span>
-                <div className="w-full">
-                  <p className="text-gray-600">{contact.name}</p>
-                  <p className="text-lg font-medium">{contact.info}</p>
-                </div>
+                <Link
+                  href={`${contact.name === "Email" && `mailto:${contact.info}`|| contact.name === "Phone" && `tel:${contact.info}` || contact.name === "Linkedin" && `https://www.linkedin.com/in${contact.info}` || contact.name === "Address" && `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contact.info)}`}`}
+                  target={
+                    contact.name === "Linkedin" || contact.name === "Address"
+                      ? "_blank"
+                      : "_self"
+                  }
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-6 w-full"
+                >
+                  <span className="text-customGreen text-xl bg-white dark:bg-customBg p-5 border-gray-600 rounded-lg">
+                    {contact.icon}
+                  </span>
+                  <div className="w-full">
+                    <p className="text-gray-600">{contact.name}</p>
+                    <p className="text-lg font-medium">{contact.info}</p>
+                  </div>
+                </Link>
               </li>
             ))}
           </ul>

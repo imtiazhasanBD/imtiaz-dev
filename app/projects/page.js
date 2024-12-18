@@ -4,11 +4,20 @@ import Link from "next/link";
 import { projects } from "../data/data";
 import { FaArrowRight } from "react-icons/fa";
 import { IoArrowForwardOutline } from "react-icons/io5";
+import { TfiNewWindow } from "react-icons/tfi";
+import { FaGithub } from "react-icons/fa";
+
+export const metadata = {
+  title: "Projects - My Portfolio",
+  description: "Browse all my projects, showcasing my development skills and work experience.",
+};
 
 const page = () => {
   return (
     <div className="text-black dark:text-white w-[95%] sm:w-[80%] mx-auto h-auto md:w-[700px] lg:w-[950px]  xl:w-[1130px] 2xl:min-w-[1280px]">
-      <h1 className="text-5xl lg:text-6xl text-center py-20 font-medium">Projects</h1>
+      <h1 className="text-5xl lg:text-6xl text-center py-20 font-medium">
+        Projects
+      </h1>
       <div className="space-y-8">
         {projects.map((project) => (
           <div
@@ -17,13 +26,15 @@ const page = () => {
           >
             {/* Left Side */}
             <div className="">
-              <Image
-                src={project.image} // Replace with your image path
-                alt="Portfolio Preview"
-                width={800}
-                height={600}
-                className="rounded-lg"
-              />
+              <Link href={`/projects/${project.name}`}>
+                <Image
+                  src={project.image} // Replace with your image path
+                  alt="Portfolio Preview"
+                  width={800}
+                  height={600}
+                  className="rounded-lg"
+                />
+              </Link>
             </div>
 
             {/* Right Side */}
@@ -62,22 +73,35 @@ const page = () => {
                   <span className="font-medium text-gray-800 dark:text-white text-base">
                     Tools:
                   </span>{" "}
-                  {project.technologiesUsed.backEnd +
-                    ", " +
-                    project.technologiesUsed.paymentIntegration}
+                  {project.technologiesUsed.backEnd &&
+                    project.technologiesUsed.paymentIntegration
+                      ? project.technologiesUsed.backEnd +
+                        " " +
+                        project.technologiesUsed.paymentIntegration
+                      : "None"}
                 </p>
               </div>
-              <div className="mt-6  gap-4">
-                <p className="text-gray-500">PREVIEW</p>
-                <a
-                  href="https://example.com/crm-system"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-400 underline font-medium hover:text-blue-300"
-                >
-                  {project.url.live}
-                </a>
-              </div>
+               {/* Links */}
+               <div className="mt-6 flex gap-8 text-gray-500 dark:text-gray-400 items-center text-sm">
+                  <a
+                    href={project.url.live}
+                    className="flex items-center gap-2 hover:text-customGreen"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <TfiNewWindow />
+                    <span>Live Demo</span>
+                  </a>
+                  <Link
+                    href={project.url.github}
+                    className="flex items-center gap-2 hover:text-customGreen"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaGithub />
+                    <span>View on GitHub</span>
+                  </Link>
+                </div>
             </div>
           </div>
         ))}
