@@ -1,25 +1,30 @@
+import Image from "next/image";
+
 export const generateMetadata = () => ({
   title: "About Me - Imtiaz Hasan",
-  description: "Learn more about Imtiaz Hasan, a passionate front-end developer with expertise in modern web technologies.",
+  description:
+    "Learn more about Imtiaz Hasan, a passionate front-end developer with expertise in modern web technologies.",
 });
 
 export default function About() {
   return (
     <div className="w-[95%] sm:w-[80%] mx-auto h-auto md:w-[700px] lg:w-[950px]  xl:w-[1130px] 2xl:min-w-[1280px] py-10">
-          <h1 className="text-6xl text-center py-20 font-medium">About Me</h1>
+      <h1 className="text-6xl text-center py-20 font-medium">About Me</h1>
       {/* Container */}
       <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-10">
         {/* Left Section: Image */}
         <div className="w-full md:w-1/2">
-          <img
+          <Image
             src="/images/about_me.webp"
             alt="Imtiaz Hasan"
+            width={800} // Replace with the actual width of your image
+            height={600} // Replace with the actual height of your image
             className="w-full rounded-lg shadow-lg"
           />
         </div>
 
         {/* Right Section: About Text */}
-        <div className="w-full md:w-1/2 p-0 lg:p-8">
+        <div className="w-full  p-0 lg:p-8">
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
             Hello! My name is{" "}
             <span className="text-cuntomPink font-semibold">Imtiaz Hasan</span>,

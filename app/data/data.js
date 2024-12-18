@@ -133,7 +133,7 @@ export const socialMedia = [
 export const projects = [
   {
     id: 1,
-    name: "eCommerce Platform",
+    name: "e-Commerce Platform",
     shortDescription:
       "A modern eCommerce platform with React, Redux Toolkit, Firebase, and Stripe integration, delivering a seamless shopping experience.",
     longDescription:
@@ -178,6 +178,7 @@ export const projects = [
       "/images/screenshot/Electro-mart(ss10).webp",
       "/images/screenshot/Electro-mart(ss11).webp",
       "/images/screenshot/Electro-mart(ss12).webp",
+      "/images/screenshot/Electro-mart(ss13).webp", 
     ]
   },
   {

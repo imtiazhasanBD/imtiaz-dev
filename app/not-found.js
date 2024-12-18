@@ -15,7 +15,7 @@ export default function NotFound() {
         />
       </div>
       <p className="text-gray-600 dark:text-gray-400 mb-6">
-        Oops! The page you're looking for doesn't exist.
+        Oops! The page you&apos;re looking for doesn&apos;t exist.
       </p>
 
       {/* Home Button */}

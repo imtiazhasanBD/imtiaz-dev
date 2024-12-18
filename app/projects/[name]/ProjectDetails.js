@@ -43,8 +43,8 @@ const ProjectDetails = ({ project }) => {
   }
 
   return (
-    <div className="w-[95%] sm:w-[80%] mx-auto pt-20 space-y-20">
-      <div className="text-center space-y-10 lg:px-48">
+    <div className={`w-[95%] sm:w-[80%] mx-auto  ${!selectedImage? "pt-20 space-y-20":"" }`}>
+      <div className="text-center space-y-10 lg:px-40">
         <span className="bg-customGreen px-5 py-3 text-white rounded-lg mx-auto font-medium">
           PROJECT
         </span>
@@ -55,9 +55,11 @@ const ProjectDetails = ({ project }) => {
       </div>
 
       <div className="max-w-4xl px-2 lg:mx-auto">
-        <img
+        <Image
           src={project.image}
           alt={project.name}
+          width={1000} 
+          height={800} 
           className="shadow-lg mb-10"
         />
 
@@ -119,7 +121,10 @@ const ProjectDetails = ({ project }) => {
               className="absolute -top-3 -right-3 text-red-500 rounded-full"
               onClick={handleClose}
             >
-              <IoMdCloseCircle size={"2rem"} className="bg-white rounded-full" />
+              <IoMdCloseCircle
+                size={"2rem"}
+                className="bg-white rounded-full"
+              />
             </button>
           </div>
         </div>

@@ -16,6 +16,9 @@ const dmMono = DM_Mono({
 export const metadata = {
   title: "Imtiaz Hasan - Frontend Developer Portfolio",
   description: "Explore my work, skills, and projects as a passionate frontend developer.",
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     title: "Imtiaz Hasan - Frontend Developer Portfolio",
     description: "Explore my work, skills, and projects.",
