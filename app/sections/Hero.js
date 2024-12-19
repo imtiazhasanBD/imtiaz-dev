@@ -18,7 +18,7 @@ const Hero = () => {
         {/* Main Image */}
         <div className="w-full">
           <Image
-            src="/images/hero_photo_new.png"
+            src="/images/hero_photo.webp"
             alt="Picture of the author"
             priority
             width={450}
