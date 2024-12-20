@@ -17,24 +17,37 @@ const page = () => {
           Below are some of the technologies and tools I have worked with, categorized into areas of expertise.
         </p>
 
-        <div className="space-y-8  px-4">
-          {skills.map((skillCategory, index) => (
-            <div key={index} className="lg:p-6">
-              <h2 className="text-2xl font-medium text-gray-800 dark:text-gray-200 mb-4">{skillCategory.category}</h2>
-              <div className="grid grid-cols-4 lg:grid-cols-8 gap-4">
-                {skillCategory.technologies.map((tech, idx) => (
-                  <div
-                    key={idx}
-                    className="flex flex-col items-center justify-center text-center p-2"
-                  >
-                    <div className="text-4xl mb-2">{tech.icon}</div>
-                    <span className="text-gray-700 dark:text-gray-300 text-sm font-medium">{tech.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+        <div className="space-y-8 px-4 grid grid-cols-1 lg:grid-cols-2 gap-8">
+  {skills.map((skillCategory, index) => (
+    <div
+      key={index}
+      className={`lg:p-6 ${
+        index === 0
+          ? "lg:col-span-2" // Make the first element span across both columns
+          : ""
+      }`}
+    >
+      <h2 className="text-2xl font-medium text-gray-800 dark:text-gray-200 mb-4">
+        {skillCategory.category}
+      </h2>
+      <div className={`grid grid-cols-4 ${skillCategory.category == "Frontend"? "lg:grid-cols-8": "lg:grid-cols-3"} gap-4`}>
+        {skillCategory.technologies.map((tech, idx) => (
+          <div
+            key={idx}
+            className="flex flex-col items-center justify-center text-center p-2"
+          >
+            <div className="text-4xl mb-2">{tech.icon}</div>
+            <span className="text-gray-700 dark:text-gray-300 text-sm font-medium">
+              {tech.name}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
+
+
       </div>
   );
 };

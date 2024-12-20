@@ -1,9 +1,22 @@
-import React from "react";
+"use client"
+import React, { useEffect } from "react";
 import { CgClose } from "react-icons/cg";
 import { contactData, socialMedia } from "../data/data";
 
 const GetInTouch = ({ isOpen, toggleSidebar }) => {
 
+    // Lock and unlock scroll based on selectedImage state
+    useEffect(() => {
+      if (isOpen) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "";
+      }
+      return () => {
+        document.body.style.overflow = "";
+      };
+    }, [isOpen]);
+  
 
   return (
     <div className="fixed h-full z-50 hidden sm:block">

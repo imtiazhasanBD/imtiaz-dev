@@ -15,7 +15,7 @@ const About = () => {
       <div className="w-full group flex flex-col lg:flex-row items-start gap-6 lg:gap-10 mt-10 lg:mt-16">
         {/* left Section: Description */}
         {/*bg-slate-300 bg-opacity-15 dark:bg-black dark:bg-opacity-15 */}
-        <div className="w-full duration-300 p-6 lg:px-10 flex flex-col justify-center gap-6 lg::gap-10 lg:border-r border-gray-300 dark:border-gray-700">
+        <div className="w-full duration-300 p-5 sm:p-6 lg:px-10 flex flex-col justify-center gap-6 lg::gap-10 lg:border-r border-gray-300 dark:border-gray-700">
           <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-0 md:items-center">
             <div>
               <h3 className="text-xl  font-medium duration-300">
@@ -45,7 +45,7 @@ const About = () => {
         <button className="hidden px-4 py-4 bg-customGreen text-black font-medium">
           Learn More
         </button>
-        <div className="p-8 w-full lg:w-1/4">
+        <div className="p-7 sm:p-8 w-full lg:w-1/4">
           <h2 className="bg-gray-500 bg-opacity-25 dark:bg-black dark:bg-opacity-25  text-sm px-4 py-2 text-customGreen font-medium rounded-lg text-center">
             Like To Do
           </h2>

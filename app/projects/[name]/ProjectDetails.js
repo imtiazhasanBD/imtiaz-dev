@@ -27,6 +27,23 @@ const ProjectDetails = ({ project }) => {
     };
   }, [selectedImage]);
 
+    const [isMobile, setIsMobile] = useState(false);
+  
+    useEffect(() => {
+      const checkScreenSize = () => {
+        setIsMobile(window.innerWidth <= 768);
+      };
+      checkScreenSize();
+  
+      window.addEventListener("resize", checkScreenSize);
+
+      return () => {
+        window.removeEventListener("resize", checkScreenSize);
+      };
+    }, []);
+  
+
+
   if (!project) {
     return (
       <div className="flex flex-col items-center justify-center h-screen text-center p-4">
@@ -89,7 +106,7 @@ const ProjectDetails = ({ project }) => {
             <div
               key={index}
               onClick={() => handleImageClick(url)}
-              className="relative w-full h-48 bg-gray-800 rounded-md overflow-hidden cursor-pointer"
+              className="relative w-full bg-gray-800 rounded-md overflow-hidden cursor-pointer"
             >
               <Image
                 src={url}
@@ -109,7 +126,7 @@ const ProjectDetails = ({ project }) => {
           className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
           onClick={handleClose}
         >
-          <div className="relative w-[90%] md:w-[70%] lg:w-[60%] max-h-[80%]">
+          <div className={`relative max-h-[80%]  ${isMobile? "w-[90%]" : ''}`}>
             <Image
               src={selectedImage}
               alt="Full-size screenshot"
