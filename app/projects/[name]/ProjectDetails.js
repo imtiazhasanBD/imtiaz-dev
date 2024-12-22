@@ -125,7 +125,7 @@ const ProjectDetails = ({ project }) => {
             </a>
           )}
         </div>
-        <h2 className="text-2xl font-medium mt-4">Screenshots</h2>
+        <h2 className="text-2xl font-medium mt-4 mb-4">Screenshots</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {project.screenShot.map((url, index) => (
             <div
