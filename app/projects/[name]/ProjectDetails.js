@@ -27,22 +27,20 @@ const ProjectDetails = ({ project }) => {
     };
   }, [selectedImage]);
 
-    const [isMobile, setIsMobile] = useState(false);
-  
-    useEffect(() => {
-      const checkScreenSize = () => {
-        setIsMobile(window.innerWidth <= 768);
-      };
-      checkScreenSize();
-  
-      window.addEventListener("resize", checkScreenSize);
+  const [isMobile, setIsMobile] = useState(false);
 
-      return () => {
-        window.removeEventListener("resize", checkScreenSize);
-      };
-    }, []);
-  
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    checkScreenSize();
 
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => {
+      window.removeEventListener("resize", checkScreenSize);
+    };
+  }, []);
 
   if (!project) {
     return (
@@ -60,7 +58,11 @@ const ProjectDetails = ({ project }) => {
   }
 
   return (
-    <div className={`w-[95%] sm:w-[80%] mx-auto  ${!selectedImage? "pt-20 space-y-20":"" }`}>
+    <div
+      className={`w-[95%] sm:w-[80%] mx-auto  ${
+        !selectedImage ? "pt-20 space-y-20" : ""
+      }`}
+    >
       <div className="text-center space-y-10 lg:px-40">
         <span className="bg-customGreen px-5 py-3 text-white rounded-lg mx-auto font-medium">
           PROJECT
@@ -75,8 +77,8 @@ const ProjectDetails = ({ project }) => {
         <Image
           src={project.image}
           alt={project.name}
-          width={1000} 
-          height={800} 
+          width={1000}
+          height={800}
           className="shadow-lg mb-10"
         />
 
@@ -99,8 +101,31 @@ const ProjectDetails = ({ project }) => {
           </span>{" "}
           {project.technologiesUsed.frontEnd}
         </p>
-
-        <h2 className="text-2xl font-medium mb-4">Screenshots</h2>
+        {/* Project Links */}
+        <h2 className="text-2xl font-medium mb-4">Project Links</h2>
+        <div className="space-y-2 space-x-4">
+          {project.url.live && (
+            <a
+              href={project.url.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400  hover:text-blue-300"
+            >
+              Live Demo
+            </a>
+          )}
+          {project.url.github && (
+            <a
+              href={project.url.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400  hover:text-blue-300"
+            >
+              GitHub Repository
+            </a>
+          )}
+        </div>
+        <h2 className="text-2xl font-medium mt-4">Screenshots</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {project.screenShot.map((url, index) => (
             <div
@@ -126,7 +151,7 @@ const ProjectDetails = ({ project }) => {
           className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
           onClick={handleClose}
         >
-          <div className={`relative max-h-[80%]  ${isMobile? "w-[90%]" : ''}`}>
+          <div className={`relative max-h-[80%]  ${isMobile ? "w-[90%]" : ""}`}>
             <Image
               src={selectedImage}
               alt="Full-size screenshot"

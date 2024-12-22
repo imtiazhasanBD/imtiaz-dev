@@ -11,7 +11,6 @@ import Link from "next/link";
 const Hero = () => {
   const words = "Hey, I’m Imtiaz";
 
-
   return (
     <div className="py-8 lg:py-16 dark:bg-customBg bg-white border rounded-b-lg shadow-md dark:border-gray-700 border-white flex flex-col lg:flex-row gap-10 px-4 sm:px-10 lg:px-8">
       <div className="relative lg:my-auto md:m-auto">
@@ -126,11 +125,16 @@ const Hero = () => {
         <div className="flex space-x-8 items-center">
           <button className="flex space-x-2 justify-center items-center">
             <FiDownload className="text-2xl text-customGreen" />
-            <p className="text-sm text-gray-700 dark:text-gray-400 font-medium">
-              Download CV
-            </p>
+            <Link href="/Imtiaz-Hasan _CV _Resume.pdf" download>
+              <p className="text-sm text-gray-700 dark:text-gray-400 font-medium">
+                Download CV
+              </p>
+            </Link>
           </button>
-          <Link href='/contact' className="flex space-x-2 justify-center items-center">
+          <Link
+            href="/contact"
+            className="flex space-x-2 justify-center items-center"
+          >
             <FaHandshake className="text-2xl text-customGreen" />
             <p className="text-sm text-gray-700 dark:text-gray-400 font-medium">
               Hire Me

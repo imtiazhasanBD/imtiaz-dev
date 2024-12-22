@@ -160,7 +160,7 @@ export const projects = [
         "Optimized for fast load times, smooth transitions, and high scalability to handle a large user base effectively.",
     },
     url: {
-      live: "",
+      live: "https://electro-mart-chi.vercel.app",
       github: "https://github.com/imtiazhasanBD/Electro-mart",
     },
     image: "/images/Electro-mart.webp",

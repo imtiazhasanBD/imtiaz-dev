@@ -1,23 +1,22 @@
-"use client"
+"use client";
 import React, { useEffect } from "react";
 import { navLinks } from "../constant/constant";
 import { CgClose } from "react-icons/cg";
 import Link from "next/link";
 
 const NavbarForMobile = ({ isOpen, toggleSidebar }) => {
+  // Lock and unlock scroll based on selectedImage state
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
-    // Lock and unlock scroll based on selectedImage state
-    useEffect(() => {
-      if (isOpen) {
-        document.body.style.overflow = "hidden";
-      } else {
-        document.body.style.overflow = "";
-      }
-      return () => {
-        document.body.style.overflow = "";
-      };
-    }, [isOpen]);
-  
   return (
     <div className="fixed h-full z-50 top-0 right-0 lg:hidden">
       {isOpen && (
@@ -41,7 +40,11 @@ const NavbarForMobile = ({ isOpen, toggleSidebar }) => {
             {navLink.label}
           </Link>
         ))}
-        <Link href={""} className="text-xl font-semibold py-3 px-8 bg-customGradient text-customGreen rounded-md hover:text-black m-auto border border-customGreen">
+        <Link
+          href="/Imtiaz-Hasan _CV _Resume.pdf"
+          download
+          className="text-xl font-semibold py-3 px-8 bg-customGradient text-customGreen rounded-md hover:text-black m-auto border border-customGreen"
+        >
           RESUME
         </Link>
         {/* Close button */}
