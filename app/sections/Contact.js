@@ -71,7 +71,7 @@ export default function Contact() {
 
   return (
     <div
-      className={`${pathName === "/contact" ? "mt-10" : "mt-40"} px-2 lg:px-0`}
+      className={`${pathName === "/contact" ? "mt-10" : "mt-20 lg:mt-40"} px-2 lg:px-0`}
     >
       <h2 className="text-2xl lg:text-4xl font-medium text-customGreen mb-8">
         Let&apos;s connect

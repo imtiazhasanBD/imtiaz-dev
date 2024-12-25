@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-slate-300 dark:border-gray-800 flex flex-col gap-4 justify-center items-center py-10 w-[95%] sm:w-[80%] mx-auto h-auto md:w-[700px] lg:w-[950px]  xl:w-[1130px] 2xl:min-w-[1280px] mt-40">
+    <footer className="border-t border-slate-300 dark:border-gray-800 flex flex-col gap-4 justify-center items-center py-10 w-[95%] sm:w-[80%] mx-auto h-auto md:w-[700px] lg:w-[950px]  xl:w-[1130px] 2xl:min-w-[1280px] mt-20 lg:mt-40">
       {/* Branding */}
       <div className="flex items-center space-x-2">
         <FaCode className="text-3xl lg:text-4xl text-customGreen" />

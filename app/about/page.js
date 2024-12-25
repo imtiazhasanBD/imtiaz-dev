@@ -8,8 +8,8 @@ export const generateMetadata = () => ({
 
 export default function About() {
   return (
-    <div className="w-[95%] sm:w-[80%] mx-auto h-auto md:w-[700px] lg:w-[950px]  xl:w-[1130px] 2xl:min-w-[1280px] py-10">
-      <h1 className="text-6xl text-center py-20 font-medium">About Me</h1>
+    <div className="text-black dark:text-white w-[95%] sm:w-[80%] mx-auto h-auto md:w-[700px] lg:w-[950px]  xl:w-[1130px] 2xl:min-w-[1280px] mt-20">
+       <h1 className="text-5xl lg:text-6xl text-center font-medium mb-6">My Skills</h1>
       {/* Container */}
       <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-10">
         {/* Left Section: Image */}
@@ -52,7 +52,7 @@ export default function About() {
       </div>
 
       {/* Personal Interests Section */}
-      <div className="max-w-6xl mx-auto px-0 lg:px-6 mt-10">
+      <div className="max-w-6xl mx-auto mt-10">
         <div className="p-8">
           <h2 className="text-3xl font-medium text-gray-700 dark:text-gray-300 mb-6">
             Outside of Coding

@@ -7,10 +7,10 @@ const error = ({ statusCode }) => {
     <div className="flex flex-col items-center justify-center h-screen text-center p-4">
       <div className="max-w-sm">
         <Image
-          src="/images/error.png" // Add your custom error image in the public folder
+          src="/images/error.png"
           alt="Error"
           width={300}
-          height={300}sz
+          height={300}
         />
       </div>
       <h1 className="text-5xl font-bold text-gray-800 dark:text-white mt-6">
