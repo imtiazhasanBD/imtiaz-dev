@@ -291,7 +291,7 @@ export const hobbies = [
 ];
 
 export const contactData = [
-  { name: "Phone", info: "+8801783638383", icon: <FiPhone /> },
+  { name: "Phone", info: "+8801782638383", icon: <FiPhone /> },
   { name: "Email", info: "imtiazbd.dev@gmail.com", icon: <LuMail /> },
   {
     name: "Linkedin",
