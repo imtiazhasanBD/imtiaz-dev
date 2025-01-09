@@ -123,7 +123,7 @@ const Hero = () => {
         </div>
 
         <div className="flex space-x-8 items-center">
-          <Link href="/Imtiaz-Hasan _CV _Resume).pdf" download>
+          <Link href="/Imtiaz-Hasan _CV _Resume.pdf" download>
             <button className="flex space-x-2 justify-center items-center">
               <FiDownload className="text-2xl text-customGreen" />
               <p className="text-sm text-gray-700 dark:text-gray-400 font-medium">
