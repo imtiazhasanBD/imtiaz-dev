@@ -7,6 +7,7 @@ export async function generateMetadata({ params }) {
     (proj) =>
       proj.name.toLowerCase() === name?.replace("%20", " ").toLowerCase()
   );
+console.log(name.replace("%20", " ").toLowerCase());
 
   return {
     title: project ? `${project.name} - Project` : "Project Not Found",

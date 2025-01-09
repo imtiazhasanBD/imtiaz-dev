@@ -183,6 +183,47 @@ export const projects = [
   },
   {
     id: 2,
+    name: "Appointment Management",
+    shortDescription:
+      "Developed a dynamic appointment booking application for a dental clinic, featuring real-time booking functionality and an admin dashboard for management.",
+    longDescription:
+      "A real-time appointment booking system for a dental clinic. Features include user-friendly booking, admin authentication, and an admin dashboard for managing appointments. Admins can view, edit, cancel, and manually book appointments. Integrated pagination, search, and filtering for efficient data management.",
+    keyFeatures: [
+      "User Functionality: Real-time appointment booking with intuitive UI. Fully responsive design for seamless usage across devices.",
+      "Admin Dashboard: Admin authentication and role-based access control. View and cancel appointments with live data updates. Statistical insights: Daily, weekly, monthly, and yearly appointment counts. Pagination for efficient data handling and streamlined display.",
+    ],
+    technologiesUsed: {
+      frontEnd: "React, Next.js, Tailwind CSS",
+      backEnd: "Firebase And Next.js API",
+      paymentIntegration: " ",
+    },
+    designHighlights: {
+      visualAppeal:
+        "A clean, modern design with a polished layout, vibrant colors, and clear navigation, enhancing user engagement.",
+      usability:
+        "A user-centric experience with responsive layouts, intuitive controls, and streamlined workflows.",
+      performance:
+        "Delivered a robust and efficient system ensuring smooth user and admin interactions",
+    },
+    url: {
+      live: "https://creative-dental-surgery.vercel.app",
+      github: "https://github.com/imtiazhasanBD/creative-dental-surgery",
+    },
+    image: "/images/screenshot/creative-dental(08).webp",
+    category: "Appointment Booking Website",
+    screenShot: [
+      "/images/screenshot/creative-dental(01).webp",
+      "/images/screenshot/creative-dental(02).webp",
+      "/images/screenshot/creative-dental(03).webp",
+      "/images/screenshot/creative-dental(04).webp",
+      "/images/screenshot/creative-dental(05).webp",
+      "/images/screenshot/creative-dental(06).webp",
+      "/images/screenshot/creative-dental(07).webp",
+  
+    ]
+  },
+  {
+    id: 3,
     name: "Disney Clone",
     shortDescription:
       "A static Disney+ clone built with React and styled using Tailwind CSS, showcasing responsive design and clean UI aesthetics.",
@@ -216,7 +257,7 @@ export const projects = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     name: "Ecart-Mart",
     shortDescription:
       "A beginner-friendly eCommerce website built using raw HTML, CSS, and JavaScript, showcasing early web development skills.",
