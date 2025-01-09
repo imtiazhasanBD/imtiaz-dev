@@ -131,6 +131,7 @@ const Hero = () => {
               </p>
             </button>
           </Link>
+
           <Link
             href="/contact"
             className="flex space-x-2 justify-center items-center"
