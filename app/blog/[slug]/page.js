@@ -24,16 +24,36 @@ export async function generateMetadata({ params }) {
     };
   }
 
+  const postImage = post.coverImage || "/images/hero.webp";
+
   return {
     title: `${post.title} - Imtiaz Hasan`,
     description: post.excerpt,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
+      url: `/blog/${post.slug}`,
       type: "article",
       publishedTime: post.date,
-      authors: [post.author.name],
+      authors: [post.author?.name || "Imtiaz Hasan"],
       tags: post.tags,
+      images: [
+        {
+          url: postImage,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [postImage],
     },
   };
 }
@@ -46,18 +66,48 @@ export default async function BlogPostPage({ params }) {
     notFound();
   }
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.excerpt,
+    image: post.coverImage
+      ? `https://www.imtiazhasan.dev${post.coverImage}`
+      : "https://www.imtiazhasan.dev/images/hero.webp",
+    datePublished: post.date,
+    author: {
+      "@type": "Person",
+      name: post.author?.name || "Imtiaz Hasan",
+      url: "https://www.imtiazhasan.dev",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Imtiaz Hasan",
+      url: "https://www.imtiazhasan.dev",
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://www.imtiazhasan.dev/blog/${post.slug}`,
+    },
+  };
+
   // Related posts (same category or others, excluding current)
   const relatedPosts = blogs
     .filter((b) => b.slug !== slug)
     .slice(0, 2);
 
   return (
-    <article className="text-black dark:text-white w-[95%] sm:w-[85%] mx-auto h-auto md:w-[700px] lg:w-[850px] xl:w-[950px] mt-8 md:mt-16">
-      {/* Back Button & Breadcrumbs */}
-      <div className="flex items-center justify-between gap-4 mb-8 text-xs sm:text-sm">
-        <Link
-          href="/blog"
-          className="inline-flex items-center gap-1.5 text-gray-500 dark:text-gray-400 hover:text-customGreen transition-colors group"
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <article className="text-black dark:text-white w-[95%] sm:w-[85%] mx-auto h-auto md:w-[700px] lg:w-[850px] xl:w-[950px] mt-8 md:mt-16">
+        {/* Back Button & Breadcrumbs */}
+        <div className="flex items-center justify-between gap-4 mb-8 text-xs sm:text-sm">
+          <Link
+            href="/blog"
+            className="inline-flex items-center gap-1.5 text-gray-500 dark:text-gray-400 hover:text-customGreen transition-colors group"
         >
           <LuArrowLeft className="text-base group-hover:-translate-x-1 transition-transform" />
           <span>Back to all articles</span>
@@ -239,5 +289,7 @@ export default async function BlogPostPage({ params }) {
         </section>
       )}
     </article>
+  </>
   );
 }
+
