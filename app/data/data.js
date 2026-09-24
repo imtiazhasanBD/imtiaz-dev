@@ -10,91 +10,149 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaGitAlt } from 'react-icons/fa';
-import { SiNextdotjs, SiTailwindcss, SiRedux, SiFirebase, SiTypescript, SiStripe, SiVisualstudiocode } from 'react-icons/si';
+import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiRedux,
+  SiFirebase,
+  SiTypescript,
+  SiStripe,
+  SiNestjs,
+  SiN8N,
+  SiWebrtc,
+  SiAgora,
+  SiSocketdotio,
+  SiDocker,
+  SiNginx,
+  SiLinux,
+  SiGithubactions,
+  SiMongodb,
+  SiPostgresql,
+  SiExpress,
+} from 'react-icons/si';
 import { VscVscode } from "react-icons/vsc";
 import { FiPhone } from "react-icons/fi";
 import { LuMail } from "react-icons/lu";
 import { IoHomeOutline } from "react-icons/io5";
 
+export { blogs, blogCategories } from "./blogs";
+
 export const BaseInfo = {
   name: "Imtiaz Hasan",
-  position: "Frontend Web Developer",
+  position: "Full Stack Developer | WebRTC & DevOps",
   aboutTitle: "let’s Introduce about myself",
   aboutMe:
-    "Hello! My name is <b>Imtiaz Hasan,</b> and I am a passionate front-end developer with expertise in modern web technologies including <b>HTML, CSS, JavaScript, Tailwind CSS, React, Redux, Firebase, Next.js, and TypeScript.</b> I am currently pursuing a Bachelor of Science in Computer Science and Engineering (BSc in CSE) at Bangladesh University. <br/> <br/> As I near the completion of my studies, I am actively seeking job opportunities to apply my skills, contribute to impactful projects, and grow as a professional. I am dedicated to crafting dynamic, responsive, and user-friendly web experiences. Let's build something amazing together!",
+    "Hello! My name is <b>Imtiaz Hasan,</b> and I am a passionate <b>Full Stack Developer</b> with expertise across modern frontend and backend architectures. I specialize in <b>Next.js, React, TypeScript, Tailwind CSS</b> on the frontend, and <b>Nest.js, Node.js, Express</b> on the backend. I have hands-on experience building real-time audio/video streaming and collaboration platforms using <b>WebRTC, Agora, ZEGOCLOUD, mediasoup, and WebSockets</b>, automating business pipelines with <b>n8n</b>, and managing end-to-end <b>CI/CD and Linux VPS deployments (Docker, Nginx)</b>. I am currently pursuing a Bachelor of Science in Computer Science and Engineering (BSc in CSE) at Bangladesh University. Let's build scalable, high-performance systems together!",
   profilePic: "/images/hero.webp",
   aboutPic: "/images/about_me.jpg",
 };
 
-export  const skills = [
-    {
-      category: 'Frontend',
-      technologies: [
-        { name: 'HTML', icon: <FaHtml5 className="text-orange-600" /> },
-        { name: 'CSS', icon: <FaCss3Alt className="text-blue-600" /> },
-        { name: 'JavaScript', icon: <FaJsSquare className="text-yellow-500" /> },
-        { name: 'React', icon: <FaReact className="text-blue-500" /> },
-        { name: 'Next.js', icon: <SiNextdotjs className="text-gray-900" /> },
-        { name: 'Tailwind', icon: <SiTailwindcss className="text-teal-400" /> },
-        { name: 'TypeScript', icon: <SiTypescript className="text-blue-600" /> },
-      ],
-    },
-    {
-      category: 'Backend Basics',
-      technologies: [
-        { name: 'Node.js', icon: <FaNodeJs className="text-green-600" /> },
-        { name: 'Firebase', icon: <SiFirebase className="text-orange-500" /> },
-      ],
-    },
-    {
-      category: 'Tools',
-      technologies: [
-        { name: 'Git', icon: <FaGitAlt className="text-orange-500" /> },
-        { name: 'VS Code', icon: <VscVscode className="text-blue-400" /> },
-        { name: 'Stripe', icon: <SiStripe className="text-indigo-600" /> },
-      ],
-    },
-  ];
-
+export const skills = [
+  {
+    category: 'Frontend',
+    technologies: [
+      { name: 'Next.js', icon: <SiNextdotjs className="text-gray-900 dark:text-white" /> },
+      { name: 'React', icon: <FaReact className="text-blue-500" /> },
+      { name: 'TypeScript', icon: <SiTypescript className="text-blue-600" /> },
+      { name: 'Tailwind', icon: <SiTailwindcss className="text-teal-400" /> },
+      { name: 'JavaScript', icon: <FaJsSquare className="text-yellow-500" /> },
+      { name: 'Redux', icon: <SiRedux className="text-purple-600" /> },
+     // { name: "TanStack Query", icon: <SiTanstackquery className="text-red-500" /> },
+      // { name: 'HTML5', icon: <FaHtml5 className="text-orange-600" /> },
+      // { name: 'CSS3', icon: <FaCss3Alt className="text-blue-600" /> },
+    ],
+  },
+  {
+    category: 'Backend & Real-Time',
+    technologies: [
+      { name: 'Nest.js', icon: <SiNestjs className="text-red-600" /> },
+      { name: 'Node.js', icon: <FaNodeJs className="text-green-600" /> },
+      { name: 'Express', icon: <SiExpress className="text-gray-700 dark:text-gray-300" /> },
+      { name: 'WebRTC', icon: <SiWebrtc className="text-blue-500" /> },
+      { name: 'Agora', icon: <SiAgora className="text-sky-500" /> },
+      { name: 'WebSockets', icon: <SiSocketdotio className="text-gray-800 dark:text-gray-200" /> },
+      { name: 'n8n', icon: <SiN8N className="text-red-500" /> },
+      { name: 'Firebase', icon: <SiFirebase className="text-orange-500" /> },
+    ],
+  },
+  {
+    category: 'Databases',
+    technologies: [
+      { name: 'MongoDB', icon: <SiMongodb className="text-green-500" /> },
+      { name: 'PostgreSQL', icon: <SiPostgresql className="text-sky-600" /> },
+    ],
+  },
+  {
+    category: 'DevOps & Tools',
+    technologies: [
+      { name: 'Docker', icon: <SiDocker className="text-blue-500" /> },
+      { name: 'Nginx', icon: <SiNginx className="text-green-600" /> },
+      { name: 'Linux / VPS', icon: <SiLinux className="text-yellow-600" /> },
+      { name: 'CI/CD', icon: <SiGithubactions className="text-blue-400" /> },
+      { name: 'Git', icon: <FaGitAlt className="text-orange-500" /> },
+      { name: 'VS Code', icon: <VscVscode className="text-blue-400" /> },
+      { name: 'Stripe', icon: <SiStripe className="text-indigo-600" /> },
+    ],
+  },
+];
 
 export const SkillsData = [
   {
     category: "Frontend",
     skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Tailwind",
+      "Next.js",
       "React",
+      "TypeScript",
+      "Tailwind CSS",
+      //"JavaScript (ES6+)",
       "Redux Toolkit",
-      "Next.js"
-      
+     // "TanStack Query",
+      // "HTML5 & CSS3"
     ]
   },
   {
-    category: "Backend Basics",
+    category: "Backend",
     skills: [
+      "Nest.js",
       "Node.js",
-      "Firebase",
+     // "Express.js",
+      "WebRTC",
+      // "Agora & ZEGOCLOUD",
+      // "mediasoup SFU",
+      "WebSockets",
+      "RESTful APIs"
     ]
   },
   {
-    category: "Tools",
+    category: "Automation",
     skills: [
-      "Git",
-      "VS Code",
-      "Stripe",
+      "n8n Automation",
+      "Webhooks",
+      "API Integrations",
+      "Workflow Pipelines"
     ]
   },
   {
-    category: "Others",
+    category: "Databases",
     skills: [
-      "PhotoShop",
-      "Canva",
-      "Microsoft Office"
+      "MongoDB",
+      "PostgreSQL",
+      "Firebase"
+    ]
+  },
+  {
+    category: "DevOps",
+    skills: [
+      "Linux VPS Hosting",
+      "Docker & Compose",
+      "Nginx",
+      "CI/CD",
+      "SSL & Certbot",
+      "Git & GitHub"
     ]
   }
 ];
+
 
 
 export const socialMedia = [
@@ -312,14 +370,14 @@ export const education = [
 
 export const experience = [
   {
-    title: "Frontend Developer",
-    subTitle: "Local Client | Sep 2024 - Nov 2024 ",
-    description: "Developed responsive web applications using React and Tailwind. Collaborated with designers to enhance UX.",
+    title: "Full Stack Developer",
+    subTitle: "Local & International Clients | Sep 2024 - Present",
+    description: "Architecting end-to-end web applications with Next.js, Nest.js, and MongoDB/PostgreSQL. Implementing real-time communication with WebRTC, WebSockets, and automating workflows using n8n.",
   },
   {
-    title: "Freelance Web Developer",
-    subTitle: "Remote | Aug 2024 - Sep 2024",
-    description: "Built custom websites and dashboards for small businesses using.",
+    title: "Full Stack & DevOps Freelancer",
+    subTitle: "Remote | May 2024 - Sep 2024",
+    description: "Built and deployed custom full-stack solutions to Linux VPS environments using Docker, Nginx reverse proxy, and GitHub Actions CI/CD pipelines.",
   },
 ];
 

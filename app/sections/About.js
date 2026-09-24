@@ -18,28 +18,25 @@ const About = () => {
         <div className="w-full duration-300 p-5 sm:p-6 lg:px-10 flex flex-col justify-center gap-6 lg::gap-10 lg:border-r border-gray-300 dark:border-gray-700">
           <div className="flex flex-col md:flex-row justify-between gap-4 md:gap-0 md:items-center">
             <div>
-              <h3 className="text-xl  font-medium duration-300">
-                Passionate Frontend Developer
+              <h3 className="text-xl font-medium duration-300">
+                Passionate Full Stack Developer
               </h3>
               <p className="text-sm mt-2 text-cuntomPink duration-300">
-                React, Next.js, TypeScript, Tailwind
+                Next.js, Nest.js, WebRTC, n8n, Docker & VPS
               </p>
             </div>
             <div>
               <p className="px-4 py-2 text-customGreen bg-gray-500 bg-opacity-25 dark:bg-black dark:bg-opacity-25 rounded-lg flex justify-center items-center shadow-shadowOne text-sm font-medium">
-                6 Months Experience
+                Full-Stack & DevOps
               </p>
             </div>
           </div>
-          <p className="text-sm md:text-base font-medium text-gray-400 duration-300">
-            I&apos;m a passionate Frontend Developer with expertise in building
-            modern, responsive, and dynamic web applications. I specialize in
-            React, Next.js, TypeScript, and Tailwind CSS. My focus is on
-            crafting seamless user interfaces and maintaining clean, efficient
-            code. With a background in computer science, I enjoy solving
-            problems and bringing ideas to life. When I&apos;m not coding, you&apos;ll
-            find me exploring new technologies or contributing to open-source
-            projects.
+          <p className="text-sm md:text-base font-medium text-gray-400 duration-300 leading-relaxed">
+            I&apos;m a passionate Full Stack Developer with expertise in building end-to-end,
+            scalable web applications. I specialize in Next.js, Nest.js, and TypeScript,
+            paired with real-time audio/video streaming via WebRTC, Agora, and WebSockets.
+            I also engineer automated workflow pipelines with n8n and manage reliable Linux VPS
+            deployments using Docker, Nginx, and GitHub Actions CI/CD.
           </p>
         </div>
         <button className="hidden px-4 py-4 bg-customGreen text-black font-medium">

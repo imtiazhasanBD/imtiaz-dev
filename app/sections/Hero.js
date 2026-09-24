@@ -65,7 +65,7 @@ const Hero = () => {
         </div>
         <div className="text-5xl font-medium">
           Passionate
-          <h1 className="text-customGreen py-2">{`{Frontend}`}</h1>
+          <h1 className="text-customGreen py-2">{`{Full-Stack}`}</h1>
           Web & App developer
           <Typewriter
             words={""}
@@ -78,15 +78,17 @@ const Hero = () => {
           />
         </div>
         <div className="flex">
-          <p className="text-black dark:text-gray-300 text-base">
-            <span className="text-cuntomPink">&lt;p&gt;</span>With expertise in
-            cutting-edge technologies such as
-            <span className="text-cuntomPink"> JavaScript</span>,
-            <span className="text-cuntomPink"> React</span>,
+          <p className="text-black dark:text-gray-300 text-base leading-relaxed">
+            <span className="text-cuntomPink">&lt;p&gt;</span>With end-to-end expertise across modern technologies—from
             <span className="text-cuntomPink"> Next.js</span>,
-            <span className="text-cuntomPink"> TypeScript</span>, and
-            <span className="text-cuntomPink"> Tailwind</span>... I deliver web
-            solutions that are both innovative and robust.
+            <span className="text-cuntomPink"> React</span>,
+            <span className="text-cuntomPink"> TypeScript</span> &
+            <span className="text-cuntomPink"> Tailwind</span> to
+            <span className="text-cuntomPink"> Nest.js</span>,
+            <span className="text-cuntomPink"> WebRTC</span>,
+            <span className="text-cuntomPink"> WebSockets</span>,
+            <span className="text-cuntomPink"> n8n</span>, and
+            <span className="text-cuntomPink"> VPS DevOps</span>... I craft scalable, high-performance web systems.
             <span className="text-cuntomPink">&lt;p/&gt;</span>
           </p>
         </div>

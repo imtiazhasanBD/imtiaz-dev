@@ -14,14 +14,14 @@ const dmMono = DM_Mono({
 });
 
 export const metadata = {
-  title: "Imtiaz Hasan - Frontend Developer Portfolio",
-  description: "Explore my work, skills, and projects as a passionate frontend developer.",
+  title: "Imtiaz Hasan - Full Stack Developer | WebRTC & DevOps",
+  description: "Explore my work, skills, and projects as a full stack developer specializing in Next.js, Nest.js, WebRTC, n8n, and Linux VPS DevOps.",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Imtiaz Hasan - Frontend Developer Portfolio",
-    description: "Explore my work, skills, and projects.",
+    title: "Imtiaz Hasan - Full Stack Developer | WebRTC & DevOps",
+    description: "Explore my work, skills, blog articles, and projects.",
     url: "/",
   },
 };

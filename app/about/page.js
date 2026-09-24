@@ -1,15 +1,15 @@
 import Image from "next/image";
 
 export const generateMetadata = () => ({
-  title: "About Me - Imtiaz Hasan",
+  title: "About Me - Imtiaz Hasan | Full Stack Developer",
   description:
-    "Learn more about Imtiaz Hasan, a passionate front-end developer with expertise in modern web technologies.",
+    "Learn more about Imtiaz Hasan, a full stack developer specializing in Next.js, Nest.js, WebRTC, n8n, and Linux VPS DevOps.",
 });
 
 export default function About() {
   return (
     <div className="text-black dark:text-white w-[95%] sm:w-[80%] mx-auto h-auto md:w-[700px] lg:w-[950px]  xl:w-[1130px] 2xl:min-w-[1280px] mt-20">
-       <h1 className="text-5xl lg:text-6xl text-center font-medium mb-6">My Skills</h1>
+       <h1 className="text-5xl lg:text-6xl text-center font-medium mb-6">About Me</h1>
       {/* Container */}
       <div className="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-10">
         {/* Left Section: Image */}
@@ -28,25 +28,26 @@ export default function About() {
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
             Hello! My name is{" "}
             <span className="text-cuntomPink font-semibold">Imtiaz Hasan</span>,
-            and I am a passionate front-end developer with expertise in modern
-            web technologies including{" "}
+            and I am a passionate{" "}
+            <span className="text-customGreen font-semibold">Full Stack Developer</span>{" "}
+            with end-to-end expertise across modern web architectures. My frontend core includes{" "}
             <span className="font-medium">
-              HTML, CSS, JavaScript, Tailwind CSS, React, Redux, Firebase,
-              Next.js, and TypeScript.
-            </span>{" "}
-            I am currently pursuing a{" "}
-            <span className="font-semibold">
-              Bachelor of Science in Computer Science and Engineering (BSc in
-              CSE)
-            </span>{" "}
-            at <span className="text-cuntomPink">Bangladesh University</span>.
+              Next.js, React, TypeScript, and Tailwind CSS
+            </span>, while my backend engineering leverages{" "}
+            <span className="font-medium">
+              Nest.js, Node.js, Express, MongoDB, and PostgreSQL
+            </span>.
+          </p>
+          <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+            I specialize in developing high-concurrency real-time systems—including voice & video streaming with{" "}
+            <span className="text-cuntomPink font-medium">WebRTC, Agora, ZEGOCLOUD, mediasoup</span> and{" "}
+            <span className="text-cuntomPink font-medium">WebSockets</span>. I also design automated workflow pipelines with{" "}
+            <span className="text-cuntomPink font-medium">n8n</span> and deploy robust production infrastructure to{" "}
+            <span className="text-cuntomPink font-medium">Linux VPS</span> environments with{" "}
+            <span className="font-medium">Docker, Nginx, and GitHub Actions CI/CD</span>.
           </p>
           <p className="text-lg text-gray-600 dark:text-gray-400">
-            As I near the completion of my studies, I am actively seeking job
-            opportunities to apply my skills, contribute to impactful projects,
-            and grow as a professional. I am dedicated to crafting dynamic,
-            responsive, and user-friendly web experiences. Let&apos;s build
-            something amazing together!
+            Currently pursuing my Bachelor of Science in Computer Science and Engineering (BSc in CSE) at Bangladesh University, I am committed to crafting dynamic, resilient, and user-centered products. Let&apos;s build something amazing together!
           </p>
         </div>
       </div>
