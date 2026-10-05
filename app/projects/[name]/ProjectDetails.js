@@ -95,23 +95,71 @@ const ProjectDetails = ({ project }) => {
         </ul>
 
         <h2 className="text-2xl font-medium mb-4">Technologies Used</h2>
-        <p className="text-gray-600 dark:text-gray-400 mb-6">
-          <span className="font-medium text-black dark:text-white">
-            Front-End:
-          </span>{" "}
-          {project.technologiesUsed.frontEnd}
-        </p>
+        <div className="space-y-3 mb-6 text-gray-600 dark:text-gray-400">
+          {project.technologiesUsed.frontEnd && (
+            <p>
+              <span className="font-medium text-black dark:text-white">
+                Front-End:
+              </span>{" "}
+              {project.technologiesUsed.frontEnd}
+            </p>
+          )}
+          {project.technologiesUsed.backEnd && (
+            <p>
+              <span className="font-medium text-black dark:text-white">
+                Back-End & API:
+              </span>{" "}
+              {project.technologiesUsed.backEnd}
+            </p>
+          )}
+          {project.technologiesUsed.devops && (
+            <p>
+              <span className="font-medium text-black dark:text-white">
+                DevOps & CI/CD:
+              </span>{" "}
+              {project.technologiesUsed.devops}
+            </p>
+          )}
+          {project.technologiesUsed.databaseAndCache && (
+            <p>
+              <span className="font-medium text-black dark:text-white">
+                Database & Cache:
+              </span>{" "}
+              {project.technologiesUsed.databaseAndCache}
+            </p>
+          )}
+          {project.technologiesUsed.paymentIntegration && project.technologiesUsed.paymentIntegration.trim() && (
+            <p>
+              <span className="font-medium text-black dark:text-white">
+                Payments & Integrations:
+              </span>{" "}
+              {project.technologiesUsed.paymentIntegration}
+            </p>
+          )}
+        </div>
         {/* Project Links */}
         <h2 className="text-2xl font-medium mb-4">Project Links</h2>
-        <div className="space-y-2 space-x-4">
+        <div className="flex flex-wrap gap-4 items-center">
           {project.url.live && (
             <a
               href={project.url.live}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400  hover:text-blue-300"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500/10 text-blue-400 border border-blue-500/20 hover:bg-blue-500/20 transition-colors text-sm font-medium"
             >
-              Live Demo
+              <span>Live Storefront</span>
+              <span>↗</span>
+            </a>
+          )}
+          {project.url.admin && (
+            <a
+              href={project.url.admin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-customGreen/10 text-customGreen border border-customGreen/20 hover:bg-customGreen/20 transition-colors text-sm font-medium"
+            >
+              <span>Admin Dashboard</span>
+              <span>↗</span>
             </a>
           )}
           {project.url.github && (
@@ -119,9 +167,10 @@ const ProjectDetails = ({ project }) => {
               href={project.url.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-400  hover:text-blue-300"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-500/10 text-gray-300 border border-gray-500/20 hover:bg-gray-500/20 transition-colors text-sm font-medium"
             >
-              GitHub Repository
+              <span>GitHub Repository</span>
+              <span>↗</span>
             </a>
           )}
         </div>

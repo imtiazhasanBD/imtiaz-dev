@@ -3,14 +3,13 @@ import { projects } from "@/app/data/data";
 
 export async function generateMetadata({ params }) {
   const { name } = await params;
+  const decoded = decodeURIComponent(name || "").toLowerCase();
   const project = projects.find(
-    (proj) =>
-      proj.name.toLowerCase() === name?.replace("%20", " ").toLowerCase()
+    (proj) => proj.name.toLowerCase() === decoded
   );
-console.log(name.replace("%20", " ").toLowerCase());
 
   return {
-    title: project ? `${project.name} - Project` : "Project Not Found",
+    title: project ? `${project.name} - Project Details` : "Project Not Found",
     description: project
       ? project.shortDescription
       : "The requested project could not be found.",
@@ -19,9 +18,9 @@ console.log(name.replace("%20", " ").toLowerCase());
 
 export default async function Page({ params }) {
   const { name } = await params;
+  const decoded = decodeURIComponent(name || "").toLowerCase();
   const project = projects.find(
-    (proj) =>
-      proj.name.toLowerCase() === name?.replace("%20", " ").toLowerCase()
+    (proj) => proj.name.toLowerCase() === decoded
   );
 
   return <ProjectDetails project={project} />;

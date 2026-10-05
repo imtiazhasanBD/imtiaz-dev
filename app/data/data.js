@@ -191,6 +191,56 @@ export const socialMedia = [
 export const projects = [
   {
     id: 1,
+    name: "Stallforest",
+    shortDescription:
+      "Enterprise-grade multi-tenant eCommerce SaaS platform featuring storefront builders, POS, GraphQL APIs, real-time analytics, and automated CI/CD Linux VPS deployments.",
+    longDescription:
+      "Stallforest is a scalable multi-tenant SaaS eCommerce ecosystem built to power modern digital storefronts and point-of-sale (POS) systems with zero platform commission. As the Full Stack Developer and DevOps Engineer on this project at Nexrox Digital, I engineered the high-throughput NestJS Apollo GraphQL backend, built the responsive multi-tenant merchant dashboard with Next.js and React 19, integrated real-time WebSockets with Redis caching, and architected the end-to-end CI/CD automated deployment pipeline with PM2 zero-downtime clustering on Linux VPS (Ubuntu & Nginx).",
+    keyFeatures: [
+      "Multi-Tenant SaaS Architecture: Dynamic store provisioning with isolated tenant database routing and automated schema migrations using Prisma ORM with Neon / PostgreSQL.",
+      "High-Performance GraphQL & REST API: Modular NestJS backend architecture with Apollo GraphQL Server, JWT authentication, Google OAuth 2.0, and granular RBAC permissions.",
+      "Real-Time Engine & Distributed Caching: Integrated WebSockets (Socket.io) with Redis Pub/Sub adapter for instant order alerts, live inventory synchronization, and sub-millisecond cache hits.",
+      "Merchant Admin Dashboard: Built with Next.js (App Router), React 19, TypeScript, Apollo Client, TanStack Query, Zustand, Fabric.js canvas editor, TipTap rich text, and Recharts analytics.",
+      "Media Processing & Cloud Storage: Direct AWS S3 integration with Sharp automated image optimization pipelines for high-resolution product catalogs.",
+      "Automated CI/CD & DevOps Pipeline: Custom bash deployment scripts, PM2 cluster zero-downtime reloads, Nginx reverse proxy configurations, SSL/Certbot, and automated cross-tenant database migrations.",
+    ],
+    technologiesUsed: {
+      frontEnd: "Next.js 16, React 19, TypeScript, Tailwind CSS, Apollo Client, TanStack Query, Zustand, Recharts",
+      backEnd: "NestJS 11, Apollo GraphQL, Prisma ORM, PostgreSQL (Neon), WebSockets (Socket.io)",
+      devops: "Linux VPS (Ubuntu), Nginx Reverse Proxy, PM2 Cluster (Zero-Downtime), Automated CI/CD Shell Scripts, SSL",
+      databaseAndCache: "PostgreSQL, Neon Database, Redis (ioredis & PubSub Adapter), AWS S3",
+      paymentIntegration: "Stripe Multi-Vendor & Webhook Integrations",
+    },
+    designHighlights: {
+      visualAppeal:
+        "Modern dark and light merchant dashboards with customized live store theme previews (Auralux, Freshmart, Electronics, Fashion).",
+      usability:
+        "Streamlined merchant onboarding, drag-and-drop catalog management, POS integration, and role-based staff permissions.",
+      performance:
+        "Sub-second GraphQL query responses, Redis multi-level caching, zero-downtime production updates, and optimized asset delivery.",
+    },
+    url: {
+      live: "https://stallforest.com",
+      admin: "https://admin.stallforest.com",
+      github: "https://github.com/imtiazhasanBD",
+    },
+    image: "/images/projects/stallforest/admin-dashboard.webp",
+    category: "Multi-Tenant SaaS & eCommerce Platform",
+    screenShot: [
+      "/images/projects/stallforest/admin-dashboard.webp",
+      "/images/projects/stallforest/admin-pos.webp",
+      "/images/projects/stallforest/admin-products.webp",
+      "/images/projects/stallforest/admin-inventory.webp",
+      "/images/projects/stallforest/stallforest-hero.webp",
+      "/images/projects/stallforest/freshmart-preview.png",
+      "/images/projects/stallforest/electronics-preview.png",
+      "/images/projects/stallforest/restaurant-preview.png",
+      "/images/projects/stallforest/fashion-preview.png",
+      "/images/projects/stallforest/gadgets-preview.png",
+    ],
+  },
+  {
+    id: 2,
     name: "e-Commerce Platform",
     shortDescription:
       "A modern eCommerce platform with React, Redux Toolkit, Firebase, and Stripe integration, delivering a seamless shopping experience.",
@@ -240,7 +290,7 @@ export const projects = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     name: "Appointment Management",
     shortDescription:
       "Developed a dynamic appointment booking application for a dental clinic, featuring real-time booking functionality and an admin dashboard for management.",
@@ -281,7 +331,7 @@ export const projects = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     name: "Disney Clone",
     shortDescription:
       "A static Disney+ clone built with React and styled using Tailwind CSS, showcasing responsive design and clean UI aesthetics.",
@@ -315,7 +365,7 @@ export const projects = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     name: "Ecart-Mart",
     shortDescription:
       "A beginner-friendly eCommerce website built using raw HTML, CSS, and JavaScript, showcasing early web development skills.",

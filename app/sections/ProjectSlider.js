@@ -107,25 +107,30 @@ const ProjectSlider = () => {
                   </p>
                   <p className="text-gray-600 dark:text-gray-400 border-b border-gray-300 dark:border-gray-700 pb-3">
                     <span className="font-medium text-gray-800 dark:text-white">
-                      Technology:
+                      Frontend:
                     </span>{" "}
                     {project.technologiesUsed.frontEnd}
                   </p>
-                  <p className="text-gray-600 dark:text-gray-400 border-b border-gray-300 dark:border-gray-700 pb-3">
-                    <span className="font-medium text-gray-800 dark:text-white">
-                      Tools:
-                    </span>{" "}
-                    {project.technologiesUsed.backEnd &&
-                    project.technologiesUsed.paymentIntegration
-                      ? project.technologiesUsed.backEnd +
-                        " " +
-                        project.technologiesUsed.paymentIntegration
-                      : "None"}
-                  </p>
+                  {project.technologiesUsed.backEnd && (
+                    <p className="text-gray-600 dark:text-gray-400 border-b border-gray-300 dark:border-gray-700 pb-3">
+                      <span className="font-medium text-gray-800 dark:text-white">
+                        Backend & API:
+                      </span>{" "}
+                      {project.technologiesUsed.backEnd}
+                    </p>
+                  )}
+                  {project.technologiesUsed.devops && (
+                    <p className="text-gray-600 dark:text-gray-400 border-b border-gray-300 dark:border-gray-700 pb-3">
+                      <span className="font-medium text-gray-800 dark:text-white">
+                        DevOps & CI/CD:
+                      </span>{" "}
+                      {project.technologiesUsed.devops}
+                    </p>
+                  )}
                 </div>
 
                 {/* Links */}
-                <div className="mt-6 flex gap-8 text-gray-500 dark:text-gray-400 items-center text-sm">
+                <div className="mt-6 flex flex-wrap gap-6 text-gray-500 dark:text-gray-400 items-center text-sm">
                   <a
                     href={project.url.live}
                     className="flex items-center gap-2 hover:text-customGreen"
@@ -135,6 +140,17 @@ const ProjectSlider = () => {
                     <TfiNewWindow />
                     <span>Live Demo</span>
                   </a>
+                  {project.url.admin && (
+                    <a
+                      href={project.url.admin}
+                      className="flex items-center gap-2 text-customGreen hover:underline font-medium"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <TfiNewWindow />
+                      <span>Admin Dashboard</span>
+                    </a>
+                  )}
                   <Link
                     href={project.url.github}
                     className="flex items-center gap-2 hover:text-customGreen"
