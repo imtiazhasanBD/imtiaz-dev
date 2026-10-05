@@ -358,11 +358,15 @@ export const projects = [
 export const education = [
   {
     title: "Bachelor's in Computer Science",
+    institution: "Bangladesh University",
+    duration: "2024 - Present",
     subTitle: "Bangladesh University | 2024 - Present",
     description: "Focused on software development, web technologies, and data structures. Graduating with a distinction.",
   },
   {
     title: "Diploma in Electrical Engineering",
+    institution: "Ahsanullah Institute (AITVET)",
+    duration: "2014 - 2018",
     subTitle: "Ahsanullah Institute(AITVET) | 2014 - 2018",
     description: "Specialized in Electrical Engineering with a focus on power systems and circuit analysis.",
   },
@@ -371,13 +375,21 @@ export const education = [
 export const experience = [
   {
     title: "Full Stack Developer",
-    subTitle: "Local & International Clients | Sep 2024 - Present",
-    description: "Architecting end-to-end web applications with Next.js, Nest.js, and MongoDB/PostgreSQL. Implementing real-time communication with WebRTC, WebSockets, and automating workflows using n8n.",
-  },
+    company: "Nexrox Digital",
+    employmentType: "Full-time",
+    duration: "Dec 2025 - Present",
+    subTitle: "Nexrox Digital • Full-time | Dec 2025 - Present",
+    description:
+      "Engineered full-stack apps with Next.js, NestJS, PostgreSQL, Prisma, and WebSockets. Built real-time audio/video features for ChatFeel and contributed to Stallforest's multi-tenant SaaS platform.",
+  },  
   {
-    title: "Full Stack & DevOps Freelancer",
-    subTitle: "Remote | May 2024 - Sep 2024",
-    description: "Built and deployed custom full-stack solutions to Linux VPS environments using Docker, Nginx reverse proxy, and GitHub Actions CI/CD pipelines.",
+    title: "Frontend Developer",
+    company: "quantumedgesoftware",
+    employmentType: "Full-time",
+    duration: "Dec 2024 - Dec 2025 ",
+    subTitle: "quantumedgesoftware • Full-time | Dec 2024 - Dec 2025 ",
+    description:
+      "Developed responsive web apps with Next.js, React, TypeScript, and Tailwind CSS. Built modular UI components, integrated backend APIs, and optimized application performance and reliability.",
   },
 ];
 
