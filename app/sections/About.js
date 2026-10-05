@@ -63,7 +63,7 @@ const About = () => {
             <div className="w-20 h-[6px] bg-gray-900 absolute top-0 -left-20 z-0"></div>
           </div>
           <Image
-            src="/images/about_me.webp"
+            src="/images/17052024_153846.🔐 TimeToFly 💯 by_Ayan (Edited).jpg"
             height={300}
             width={300}
             alt="About_me"

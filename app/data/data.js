@@ -44,7 +44,7 @@ export const BaseInfo = {
   aboutMe:
     "Hello! My name is <b>Imtiaz Hasan,</b> and I am a passionate <b>Full Stack Developer</b> with expertise across modern frontend and backend architectures. I specialize in <b>Next.js, React, TypeScript, Tailwind CSS</b> on the frontend, and <b>Nest.js, Node.js, Express</b> on the backend. I have hands-on experience building real-time audio/video streaming and collaboration platforms using <b>WebRTC, Agora, ZEGOCLOUD, mediasoup, and WebSockets</b>, automating business pipelines with <b>n8n</b>, and managing end-to-end <b>CI/CD and Linux VPS deployments (Docker, Nginx)</b>. I am currently pursuing a Bachelor of Science in Computer Science and Engineering (BSc in CSE) at Bangladesh University. Let's build scalable, high-performance systems together!",
   profilePic: "/images/hero.webp",
-  aboutPic: "/images/about_me.jpg",
+  aboutPic: "/images/17052024_153846.🔐 TimeToFly 💯 by_Ayan (Edited).jpg",
 };
 
 export const skills = [

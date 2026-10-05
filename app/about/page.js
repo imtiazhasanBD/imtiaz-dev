@@ -15,7 +15,7 @@ export default function About() {
         {/* Left Section: Image */}
         <div className="w-full md:w-1/2">
           <Image
-            src="/images/about_me.webp"
+            src="/images/17052024_153846.🔐 TimeToFly 💯 by_Ayan (Edited).jpg"
             alt="Imtiaz Hasan"
             width={800} // Replace with the actual width of your image
             height={600} // Replace with the actual height of your image
