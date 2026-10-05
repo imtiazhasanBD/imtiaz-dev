@@ -241,6 +241,46 @@ export const projects = [
   },
   {
     id: 2,
+    name: "MyProWorker",
+    shortDescription:
+      "A modern freelance service marketplace and job portal connecting clients with skilled talent, featuring dynamic job discovery, multi-faceted filtering, and custom role onboarding.",
+    longDescription:
+      "MyProWorker (developed at QuantumEdge Software) is a responsive freelance services and job marketplace platform designed to bridge the gap between businesses and top freelance talent. Built with Next.js 15, React 19, and Tailwind CSS, the platform delivers high-speed job discovery, multi-faceted filtering (categories, experience levels, budget, and talent rating), responsive job cards with skeleton loading states, and an interactive dual-role onboarding flow ('I want to work' vs 'I want to hire').",
+    keyFeatures: [
+      "Dynamic Job & Service Discovery: Browse freelance services and job postings with instant category switching, keyword search, and sorting algorithms.",
+      "Multi-Faceted Search & Filters: Filter opportunities by category, experience level, salary range, freelancer rating, and delivery timeline.",
+      "Optimized UX with Skeleton Loading: Integrated custom JobSkeletonLoader components to provide seamless, flicker-free feedback during API queries.",
+      "Role-Based Onboarding & Auth: Dedicated dual-role registration flow ('I want to work' vs 'I want to hire') with secure form validation and responsive modals.",
+      "Component Architecture: Modular and reusable React UI components including JobCard, InputField, Header with category navigation, and mobile-friendly drawer menu.",
+      "RESTful API Integration: Seamless Axios API client for real-time job feeds, talent listings, and user authentication.",
+    ],
+    technologiesUsed: {
+      frontEnd: "Next.js 15, React 19, TypeScript, Tailwind CSS, Axios, React Icons",
+      backEnd: "REST API Integration (Authentication & Job Feeds)",
+    },
+    designHighlights: {
+      visualAppeal:
+        "Clean dark green (#0f1a0f) aesthetic with vibrant green accents, modern typography, and structured service cards.",
+      usability:
+        "Intuitive search bar, quick category pills, clear job attributes, and responsive mobile-first navigation.",
+      performance:
+        "Server-side rendering with Next.js App Router, optimized web assets, and smooth skeleton loader transitions.",
+    },
+    url: {
+      live: "https://my-proworker-front-end.vercel.app",
+      github: "https://github.com/imtiazhasanBD/quantumedge-job-portal",
+    },
+    image: "/images/projects/proworker/proworker-hero.webp",
+    category: "Job Portal & Freelance Marketplace",
+    screenShot: [
+      "/images/projects/proworker/proworker-hero.webp",
+      "/images/projects/proworker/proworker-jobs.webp",
+      "/images/projects/proworker/proworker-categories.webp",
+      "/images/projects/proworker/proworker-onboarding.webp",
+    ],
+  },
+  {
+    id: 3,
     name: "e-Commerce Platform",
     shortDescription:
       "A modern eCommerce platform with React, Redux Toolkit, Firebase, and Stripe integration, delivering a seamless shopping experience.",
@@ -290,7 +330,7 @@ export const projects = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     name: "Appointment Management",
     shortDescription:
       "Developed a dynamic appointment booking application for a dental clinic, featuring real-time booking functionality and an admin dashboard for management.",
@@ -331,7 +371,7 @@ export const projects = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     name: "Disney Clone",
     shortDescription:
       "A static Disney+ clone built with React and styled using Tailwind CSS, showcasing responsive design and clean UI aesthetics.",
@@ -365,7 +405,7 @@ export const projects = [
     ]
   },
   {
-    id: 5,
+    id: 6,
     name: "Ecart-Mart",
     shortDescription:
       "A beginner-friendly eCommerce website built using raw HTML, CSS, and JavaScript, showcasing early web development skills.",

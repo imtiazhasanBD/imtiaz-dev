@@ -119,14 +119,6 @@ const ProjectSlider = () => {
                       {project.technologiesUsed.backEnd}
                     </p>
                   )}
-                  {project.technologiesUsed.devops && (
-                    <p className="text-gray-600 dark:text-gray-400 border-b border-gray-300 dark:border-gray-700 pb-3">
-                      <span className="font-medium text-gray-800 dark:text-white">
-                        DevOps & CI/CD:
-                      </span>{" "}
-                      {project.technologiesUsed.devops}
-                    </p>
-                  )}
                 </div>
 
                 {/* Links */}
