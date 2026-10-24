@@ -59,9 +59,8 @@ const ProjectDetails = ({ project }) => {
 
   return (
     <div
-      className={`w-[95%] sm:w-[80%] mx-auto  ${
-        !selectedImage ? "pt-20 space-y-20" : ""
-      }`}
+      className={`w-[95%] sm:w-[80%] mx-auto  ${!selectedImage ? "pt-20 space-y-20" : ""
+        }`}
     >
       <div className="text-center space-y-10 lg:px-40">
         <span className="bg-customGreen px-5 py-3 text-white rounded-lg mx-auto font-medium">

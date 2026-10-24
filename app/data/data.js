@@ -191,6 +191,56 @@ export const socialMedia = [
 export const projects = [
   {
     id: 1,
+    name: "GhostTrace",
+    shortDescription:
+      "A portfolio-grade backend observability & evidence-first debugging platform that ingests OpenTelemetry traces via OTLP/HTTP, visualizes distributed trace waterfalls, groups exceptions by stack-hash, and performs differential trace analysis.",
+    longDescription:
+      "GhostTrace is a full-stack observability platform built as a monorepo (pnpm workspaces) with NestJS for the ingestion & API layer, Next.js 14 App Router for the dashboard, and PostgreSQL for persistence. It implements the standard OpenTelemetry OTLP/HTTP protocol so any Node.js or NestJS service can pipe traces in with zero vendor lock-in. Key engineering highlights include: a SHA-256 hashed API key system with one-time reveal and instant revocation, an automatic PII/secrets redaction pipeline (bearer tokens, passwords, cookies, card numbers), idempotent span deduplication, real-time Live Tail via Server-Sent Events, and a differential trace comparison engine that side-by-sides a baseline (success) trace against a failing trace to instantly surface missing operations and execution divergence. The project also ships custom OpenTelemetry SDK packages (@ghosttrace/sdk-node, @ghosttrace/instrumentation-nest, @ghosttrace/instrumentation-prisma) and a fully instrumented demo e-commerce API to generate reproducible telemetry.",
+    keyFeatures: [
+      "Standard OTLP/HTTP Ingestion: Implements POST /v1/traces supporting both JSON and Protobuf formats — compatible with any OpenTelemetry-instrumented service.",
+      "Evidence-First Trace Waterfall: Parent-child span hierarchy with microsecond offsets, status flags, color-coded latency bars, and a Span Detail drawer showing formatted SQL / Prisma calls.",
+      "Root Cause & Exception Forensics: Captures error types, messages, and full formatted stack traces per span with a dedicated Exceptions page.",
+      "Stack-Hash Error Grouping: Aggregates recurring exceptions by cryptographic signature hash to eliminate noise and surface true error patterns.",
+      "Differential Trace Analysis: Side-by-side comparison of baseline vs target traces to detect missing spans and execution divergence.",
+      "Slow Query Analyzer: Surfaces Prisma ORM database operations exceeding configurable thresholds (25ms / 50ms / 100ms / 250ms) with formatted SQL and direct trace navigation.",
+      "Live Tail via SSE: Real-time streaming feed of incoming traces and exceptions with pause/resume, auto-scroll, and error-only filter.",
+      "Zero-Trust Security: SHA-256 hashed API keys (one-time reveal), automatic PII redaction (tokens, passwords, cookies, card numbers) before persistence.",
+      "Custom OTel SDK Packages: Ships @ghosttrace/sdk-node, @ghosttrace/instrumentation-nest, and @ghosttrace/instrumentation-prisma as reusable workspace packages.",
+      "Dockerized Monorepo: Full docker-compose setup (API, Web, Demo API, PostgreSQL) with Nginx reverse proxy config for production VPS deployment.",
+    ],
+    technologiesUsed: {
+      frontEnd: "Next.js 14 (App Router), React, TypeScript, Tailwind CSS",
+      backEnd: "NestJS, OpenTelemetry OTLP/HTTP, Server-Sent Events (SSE), Prisma ORM, PostgreSQL",
+      devops: "Docker & Docker Compose, Nginx Reverse Proxy, pnpm Workspaces (Monorepo), Linux VPS",
+      databaseAndCache: "PostgreSQL (Prisma ORM), SHA-256 Key Hashing",
+    },
+    designHighlights: {
+      visualAppeal:
+        "Dark-themed dashboard (#0d1117) with teal/cyan accent colors, monospace typography for trace data, and color-coded span status indicators (OK green, ERROR red).",
+      usability:
+        "Waterfall timeline with interactive Span Detail drawer, one-click differential comparison, configurable slow-query thresholds, and real-time Live Tail with auto-scroll.",
+      performance:
+        "Idempotent span deduplication, optimistic polling (3s interval), SSE streaming for live tail, and cryptographic key hashing for zero-overhead auth.",
+    },
+    url: {
+      github: "https://github.com/imtiazhasanBD/GhostTrace",
+    },
+    image: "/images/projects/ghosttrace/overview.png",
+    category: "Backend Observability & DevTools Platform",
+    screenShot: [
+      "/images/projects/ghosttrace/overview.png",
+      "/images/projects/ghosttrace/traces.png",
+      "/images/projects/ghosttrace/trace-detail.png",
+      "/images/projects/ghosttrace/slow-queries.png",
+      "/images/projects/ghosttrace/errors.png",
+      "/images/projects/ghosttrace/services.png",
+      "/images/projects/ghosttrace/live-tail.png",
+      "/images/projects/ghosttrace/compare.png",
+      "/images/projects/ghosttrace/sdk-keys.png",
+    ],
+  },
+  {
+    id: 2,
     name: "Stallforest",
     shortDescription:
       "Enterprise-grade multi-tenant eCommerce SaaS platform featuring storefront builders, POS, GraphQL APIs, real-time analytics, and automated CI/CD Linux VPS deployments.",

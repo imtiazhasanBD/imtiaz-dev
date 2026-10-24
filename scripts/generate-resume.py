@@ -276,12 +276,12 @@ def generate_resume():
   <section class="section">
     <div class="section-title">Technical Skills</div>
     <div class="skills-list">
-      <div><strong>Frontend:</strong> HTML5, CSS3, JavaScript (ES6+), TypeScript, React.js, Next.js, Tailwind CSS, Redux Toolkit</div>
+      <div><strong>Frontend &amp; UI:</strong> HTML5, CSS3, JavaScript (ES6+), TypeScript, React.js, Next.js, Tailwind CSS, shadcn/ui, Material UI, motion.dev</div>
+      <div><strong>State &amp; Data Fetching:</strong> TanStack Query (React Query), Redux Toolkit, RTK Query, Zustand</div>
       <div><strong>Backend:</strong> Node.js, Express.js, NestJS, Apollo GraphQL, REST APIs, JWT, WebSockets</div>
       <div><strong>Databases &amp; ORM:</strong> PostgreSQL, MongoDB, Redis, Prisma ORM, Mongoose</div>
-      <div><strong>Real-Time Communication:</strong> WebRTC concepts, Agora RTC, ZEGOCLOUD RTC</div>
-      <div><strong>DevOps &amp; Deployment:</strong> Docker, Docker Compose, Linux, Nginx, PM2, VPS Deployment, Vercel</div>
-      <div><strong>Tools &amp; Integration:</strong> Git, GitHub, AWS S3, Postman, Firebase, Stripe, Meta APIs</div>
+      <div><strong>Real-Time &amp; DevOps:</strong> Agora RTC, Socket.io, Docker, Linux, Nginx, PM2, VPS Deployment</div>
+      <div><strong>Tools &amp; Integrations:</strong> Git, GitHub, AWS S3, Stripe, SSLCommerz, n8n, Meta APIs, Postman</div>
     </div>
   </section>
 
